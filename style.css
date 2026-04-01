@@ -660,8 +660,6 @@ main {
   .btn {
     width: 100%;
   }
-}
-
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
@@ -673,4 +671,15 @@ main {
   .btn {
     transition: none;
   }
+  .fade-up {
+  opacity: 0;
+  transform: translateY(26px);
+  transition: opacity 700ms ease, transform 700ms ease;
+}
+
+.fade-up.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+}
 }
