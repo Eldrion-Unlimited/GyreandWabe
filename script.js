@@ -23,7 +23,9 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
-  const cards = document.querySelectorAll(".collection-card, .authority-card, .stat-card");
+  const animatedCards = document.querySelectorAll(
+    ".collection-card, .authority-card, .stat-card, .detail-card, .detail-image-card, .spec-card"
+  );
 
   if ("IntersectionObserver" in window) {
     const observer = new IntersectionObserver(
@@ -40,7 +42,7 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     );
 
-    cards.forEach((card) => {
+    animatedCards.forEach((card) => {
       card.classList.add("fade-up");
       observer.observe(card);
     });
@@ -58,6 +60,23 @@ document.addEventListener("DOMContentLoaded", () => {
 
     window.addEventListener("mouseleave", () => {
       heroVisual.style.transform = "translate3d(0, 0, 0)";
+    });
+  }
+
+  const mainProductImage = document.getElementById("mainProductImage");
+  const thumbs = document.querySelectorAll(".thumb");
+
+  if (mainProductImage && thumbs.length) {
+    thumbs.forEach((thumb) => {
+      thumb.addEventListener("click", () => {
+        const nextImage = thumb.getAttribute("data-image");
+        if (!nextImage) return;
+
+        mainProductImage.src = nextImage;
+
+        thumbs.forEach((item) => item.classList.remove("active"));
+        thumb.classList.add("active");
+      });
     });
   }
 });
