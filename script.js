@@ -46,6 +46,10 @@ document.addEventListener("DOMContentLoaded", () => {
       card.classList.add("fade-up");
       observer.observe(card);
     });
+  } else {
+    animatedCards.forEach((card) => {
+      card.classList.add("fade-up", "is-visible");
+    });
   }
 
   const heroVisual = document.querySelector(".hero-visual");
@@ -73,6 +77,9 @@ document.addEventListener("DOMContentLoaded", () => {
         if (!nextImage) return;
 
         mainProductImage.src = nextImage;
+        mainProductImage.alt =
+          thumb.querySelector("img")?.getAttribute("alt") ||
+          mainProductImage.alt;
 
         thumbs.forEach((item) => item.classList.remove("active"));
         thumb.classList.add("active");
