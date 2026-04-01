@@ -14,6 +14,7 @@
     href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@400;500;600;700;800&display=swap"
     rel="stylesheet"
   />
+  <link rel="preload" as="image" href="inst8.jpg" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
@@ -51,45 +52,48 @@
               id="mainProductImage"
               src="inst8.jpg"
               alt="Interstellar luxury resin dice set by Gyre and Wabe"
+              loading="eager"
+              fetchpriority="high"
+              decoding="async"
             />
           </div>
 
           <div class="product-thumbs">
             <button class="thumb" data-image="inst1.jpg" type="button">
-              <img src="inst1.jpg" alt="Interstellar view 1" />
+              <img src="inst1.jpg" alt="Interstellar view 1" loading="lazy" />
             </button>
             <button class="thumb" data-image="inst2.jpg" type="button">
-              <img src="inst2.jpg" alt="Interstellar view 2" />
+              <img src="inst2.jpg" alt="Interstellar view 2" loading="lazy" />
             </button>
             <button class="thumb" data-image="inst3.jpg" type="button">
-              <img src="inst3.jpg" alt="Interstellar view 3" />
+              <img src="inst3.jpg" alt="Interstellar view 3" loading="lazy" />
             </button>
             <button class="thumb" data-image="inst4.jpg" type="button">
-              <img src="inst4.jpg" alt="Interstellar view 4" />
+              <img src="inst4.jpg" alt="Interstellar view 4" loading="lazy" />
             </button>
             <button class="thumb" data-image="inst5.jpg" type="button">
-              <img src="inst5.jpg" alt="Interstellar view 5" />
+              <img src="inst5.jpg" alt="Interstellar view 5" loading="lazy" />
             </button>
             <button class="thumb" data-image="inst6.jpg" type="button">
-              <img src="inst6.jpg" alt="Interstellar view 6" />
+              <img src="inst6.jpg" alt="Interstellar view 6" loading="lazy" />
             </button>
             <button class="thumb" data-image="inst7.jpg" type="button">
-              <img src="inst7.jpg" alt="Interstellar view 7" />
+              <img src="inst7.jpg" alt="Interstellar view 7" loading="lazy" />
             </button>
             <button class="thumb active" data-image="inst8.jpg" type="button">
-              <img src="inst8.jpg" alt="Interstellar view 8" />
+              <img src="inst8.jpg" alt="Interstellar view 8" loading="lazy" />
             </button>
             <button class="thumb" data-image="inst9.jpg" type="button">
-              <img src="inst9.jpg" alt="Interstellar view 9" />
+              <img src="inst9.jpg" alt="Interstellar view 9" loading="lazy" />
             </button>
             <button class="thumb" data-image="instx.jpg" type="button">
-              <img src="instx.jpg" alt="Interstellar feature view" />
+              <img src="instx.jpg" alt="Interstellar feature view" loading="lazy" />
             </button>
           </div>
         </div>
 
         <div class="product-copy">
-          <p class="section-kicker">Mimsy Realm</p>
+          <p class="section-kicker">Obscure Realm</p>
           <h1>Interstellar</h1>
           <p class="product-tagline">Cosmic bloom under disciplined pressure.</p>
 
@@ -166,19 +170,19 @@
 
       <section class="detail-grid">
         <article class="detail-image-card">
-          <img src="inst6.jpg" alt="Interstellar detail shot 1" />
+          <img src="inst6.jpg" alt="Interstellar detail shot 1" loading="lazy" />
         </article>
         <article class="detail-image-card">
-          <img src="inst7.jpg" alt="Interstellar detail shot 2" />
+          <img src="inst7.jpg" alt="Interstellar detail shot 2" loading="lazy" />
         </article>
         <article class="detail-image-card">
-          <img src="inst8.jpg" alt="Interstellar detail shot 3" />
+          <img src="inst8.jpg" alt="Interstellar detail shot 3" loading="lazy" />
         </article>
         <article class="detail-image-card">
-          <img src="inst9.jpg" alt="Interstellar detail shot 4" />
+          <img src="inst9.jpg" alt="Interstellar detail shot 4" loading="lazy" />
         </article>
         <article class="detail-image-card detail-image-wide">
-          <img src="instx.jpg" alt="Interstellar feature shot" />
+          <img src="instx.jpg" alt="Interstellar feature shot" loading="lazy" />
         </article>
       </section>
 
