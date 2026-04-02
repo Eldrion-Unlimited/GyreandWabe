@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gyre &amp; Wabe Registry</title>
+  <meta
+    name="description"
+    content="The official Gyre & Wabe Registry. A living archive of authenticated artifacts entered into the house record."
+  />
+  <style>
+    :root {
+      --bg: #070707;
+      --bg2: #0d0d0d;
+      --panel: #121212;
+      --panel2: #181818;
+      --gold: #d4af37;
+      --gold-soft: #b8941f;
+      --text: #f4efe2;
+      --muted: #b8ac87;
+      --line: rgba(212, 175, 55, 0.24);
+      --shadow: 0 18px 50px rgba(0, 0, 0, 0.45);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      min-height: 100vh;
+      font-family: Georgia, "Times New Roman", serif;
+      color: var(--text);
+      background:
+        radial-gradient(circle at top, rgba(212,175,55,0.08), transparent 30%),
+        linear-gradient(180deg, #050505 0%, #0b0b0b 45%, #070707 100%);
+      letter-spacing: 0.02em;
+    }
+
+    .wrap {
+      width: min(1200px, calc(100% - 32px));
+      margin: 0 auto;
+      padding: 32px 0 80px;
+    }
+
+    .crest {
+      text-align: center;
+      color: var(--muted);
+      font-size: 0.82rem;
+      letter-spacing: 0.34em;
+      text-transform: uppercase;
+      margin-bottom: 18px;
+    }
+
+    .hero {
+      border: 1px solid var(--line);
+      border-radius: 24px;
+      padding: 48px 28px 32px;
+      background: linear-gradient(180deg, rgba(212,175,55,0.08), rgba(255,255,255,0.01));
+      box-shadow: var(--shadow);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background:
+        linear-gradient(120deg, transparent 0%, rgba(212,175,55,0.06) 45%, transparent 100%);
+      pointer-events: none;
+    }
+
+    .eyebrow {
+      color: var(--gold);
+      text-transform: uppercase;
+      letter-spacing: 0.34em;
+      font-size: 0.78rem;
+      margin-bottom: 14px;
+      position: relative;
+      z-index: 1;
+    }
+
+    h1 {
+      font-size: clamp(2.2rem, 5vw, 4.5rem);
+      line-height: 1;
+      margin-bottom: 14px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .hero p {
+      max-width: 840px;
+      color: var(--muted);
+      font-size: 1rem;
+      line-height: 1.9;
+      position: relative;
+      z-index: 1;
+    }
+
+    .hero-pills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 24px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .pill {
+      border: 1px solid var(--line);
+      background: rgba(212,175,55,0.08);
+      color: var(--text);
+      border-radius: 999px;
+      padding: 10px 14px;
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+
+    .section-head {
+      margin: 34px 0 18px;
+      display: flex;
+      justify-content: space-between;
+      align-items: end;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .section-head h2 {
+      color: var(--gold);
+      font-size: 0.9rem;
+      text-transform: uppercase;
+      letter-spacing: 0.28em;
+    }
+
+    .section-head p {
+      color: var(--muted);
+      font-size: 0.92rem;
+    }
+
+    .registry-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 18px;
+    }
+
+    .card {
+      background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+      border: 1px solid var(--line);
+      border-radius: 22px;
+      padding: 22px;
+      box-shadow: var(--shadow);
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      transition: transform 0.18s ease, border-color 0.18s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-3px);
+      border-color: rgba(212,175,55,0.42);
+    }
+
+    .card-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: start;
+      gap: 12px;
+    }
+
+    .registry-id {
+      color: var(--gold);
+      font-size: 0.78rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+    }
+
+    .status {
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      padding: 7px 10px;
+      font-size: 0.72rem;
+      color: var(--muted);
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      white-space: nowrap;
+    }
+
+    .card h3 {
+      font-size: 1.55rem;
+      line-height: 1.1;
+    }
+
+    .meta {
+      display: grid;
+      gap: 8px;
+      color: var(--muted);
+      font-size: 0.9rem;
+      line-height: 1.7;
+    }
+
+    .meta strong {
+      color: var(--text);
+      font-weight: normal;
+    }
+
+    .blurb {
+      color: var(--text);
+      line-height: 1.85;
+      font-size: 0.95rem;
+    }
+
+    .actions {
+      margin-top: auto;
+      padding-top: 8px;
+    }
+
+    .btn {
+      display: inline-block;
+      text-decoration: none;
+      color: #111;
+      background: linear-gradient(180deg, #e6c558, #c99d25);
+      padding: 12px 18px;
+      border-radius: 999px;
+      font-size: 0.82rem;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      font-weight: bold;
+    }
+
+    .btn:hover {
+      filter: brightness(1.05);
+    }
+
+    .footer {
+      margin-top: 40px;
+      border-top: 1px solid var(--line);
+      padding-top: 22px;
+      text-align: center;
+      color: var(--muted);
+      font-size: 0.82rem;
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+    }
+
+    @media (max-width: 980px) {
+      .registry-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+
+    @media (max-width: 680px) {
+      .registry-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero {
+        padding: 36px 22px 24px;
+      }
+
+      .card {
+        padding: 20px;
+      }
+
+      .card-top {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="wrap">
+    <div class="crest">Gyre &amp; Wabe Registry</div>
+
+    <section class="hero">
+      <div class="eyebrow">Official House Archive</div>
+      <h1>The Registry</h1>
+      <p>
+        The Gyre &amp; Wabe Registry serves as the official archive of authenticated artifacts issued by the house.
+        Each entry records a distinct work by registry designation, SKU, realm, edition status, and archival note.
+        To be entered into the Registry is to be recognized as an authentic original of Gyre &amp; Wabe.
+      </p>
+
+      <div class="hero-pills">
+        <div class="pill">Authenticated Artifacts</div>
+        <div class="pill">One of One</div>
+        <div class="pill">EST 2026</div>
+        <div class="pill">Living Archive</div>
+      </div>
+    </section>
+
+    <section class="section-head">
+      <h2>Archive Entries</h2>
+      <p>Founding registry sequence, 2026.</p>
+    </section>
+
+    <section class="registry-grid">
+      <article class="card">
+        <div class="card-top">
+          <div class="registry-id">GWR-2026-0001</div>
+          <div class="status">FORGED</div>
+        </div>
+        <h3>Midnight Hatter</h3>
+        <div class="meta">
+          <div><strong>SKU:</strong> GW-MIMS-MDHT-KF-01-B01</div>
+          <div><strong>Realm:</strong> MIMS</div>
+          <div><strong>Edition:</strong> ONE OF ONE</div>
+        </div>
+        <p class="blurb">
+          A founding archive piece entered into the Registry as a singular artifact of the MIMS realm.
+        </p>
+        <div class="actions">
+          <a class="btn" href="GWR-2026-0001.html">View Entry</a>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="card-top">
+          <div class="registry-id">GWR-2026-0002</div>
+          <div class="status">FORGED</div>
+        </div>
+        <h3>Looking-Glass Ember</h3>
+        <div class="meta">
+          <div><strong>SKU:</strong> GW-WLGL-LOOK-EMBR-01-B01</div>
+          <div><strong>Realm:</strong> WLGL</div>
+          <div><strong>Edition:</strong> ONE OF ONE</div>
+        </div>
+        <p class="blurb">
+          A verified original entered into the Registry under the mirrored fire and strange light of WLGL.
+        </p>
+        <div class="actions">
+          <a class="btn" href="GWR-2026-0002.html">View Entry</a>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="card-top">
+          <div class="registry-id">GWR-2026-0003</div>
+          <div class="status">FORGED</div>
+        </div>
+        <h3>Interstellar</h3>
+        <div class="meta">
+          <div><strong>SKU:</strong> GW-MIMS-STCH-MG-01-B01</div>
+          <div><strong>Realm:</strong> MIMS</div>
+          <div><strong>Edition:</strong> ONE OF ONE</div>
+        </div>
+        <p class="blurb">
+          A cosmic archive artifact recorded as a singular work beneath the Gyre &amp; Wabe banner.
+        </p>
+        <div class="actions">
+          <a class="btn" href="GWR-2026-0003.html">View Entry</a>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="card-top">
+          <div class="registry-id">GWR-2026-0004</div>
+          <div class="status">FORGED</div>
+        </div>
+        <h3>Boroglass Blue</h3>
+        <div class="meta">
+          <div><strong>SKU:</strong> GW-MIMS-BRGL-BLU-01-B01</div>
+          <div><strong>Realm:</strong> MIMS</div>
+          <div><strong>Edition:</strong> ONE OF ONE</div>
+        </div>
+        <p class="blurb">
+          A documented original of depth and clarity, entered into the house archive as a verified artifact.
+        </p>
+        <div class="actions">
+          <a class="btn" href="GWR-2026-0004.html">View Entry</a>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="card-top">
+          <div class="registry-id">GWR-2026-0005</div>
+          <div class="status">FORGED</div>
+        </div>
+        <h3>Bandersmoke</h3>
+        <div class="meta">
+          <div><strong>SKU:</strong> GW-MIMS-BDSM-GF+BK-01-B01</div>
+          <div><strong>Realm:</strong> MIMS</div>
+          <div><strong>Edition:</strong> ONE OF ONE</div>
+        </div>
+        <p class="blurb">
+          Suspended shadow and shifting particulate, sealed into the archive as an authenticated original.
+        </p>
+        <div class="actions">
+          <a class="btn" href="GWR-2026-0005.html">View Entry</a>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="card-top">
+          <div class="registry-id">GWR-2026-0006</div>
+          <div class="status">FORGED</div>
+        </div>
+        <h3>Heads Will Roll</h3>
+        <div class="meta">
+          <div><strong>SKU:</strong> GW-QUEE-HDWR-OB+MC-01-B01</div>
+          <div><strong>Realm:</strong> QUEE</div>
+          <div><strong>Edition:</strong> ONE OF ONE</div>
+        </div>
+        <p class="blurb">
+          A QUEE realm artifact marked by old-blood drama and entered into the Registry as a singular original.
+        </p>
+        <div class="actions">
+          <a class="btn" href="GWR-2026-0006.html">View Entry</a>
+        </div>
+      </article>
+    </section>
+
+    <footer class="footer">
+      Coordinators of Chaos &nbsp;•&nbsp; Gyre &amp; Wabe &nbsp;•&nbsp; Official Registry
+    </footer>
+  </main>
+</body>
+</html>
