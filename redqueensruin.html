@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Red Queen’s Ruin | Gyre & Wabe</title>
+  <meta name="description" content="Red Queen’s Ruin — a one-of-one luxury resin dice set by Gyre & Wabe." />
+  <style>
+    :root {
+      --bg: #070707;
+      --bg-soft: #101011;
+      --red: #7e0f16;
+      --red-bright: #b21c26;
+      --gold: #d7b06a;
+      --ivory: #f4ead8;
+      --muted: #c7b9a0;
+      --line: rgba(215, 176, 106, 0.28);
+      --shadow: rgba(0, 0, 0, 0.48);
+      --max: 1220px;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+
+    body {
+      margin: 0;
+      color: var(--ivory);
+      min-height: 100vh;
+      font-family: Georgia, "Times New Roman", serif;
+      background:
+        radial-gradient(circle at 18% 0%, rgba(178,28,38,0.18), transparent 22%),
+        radial-gradient(circle at 85% 12%, rgba(215,176,106,0.09), transparent 22%),
+        linear-gradient(180deg, #13090b 0%, #090909 42%, #050505 100%);
+      overflow-x: hidden;
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      background:
+        linear-gradient(rgba(255,255,255,0.018), rgba(255,255,255,0.018)),
+        radial-gradient(circle at 25% 30%, rgba(255,255,255,0.022), transparent 18%);
+      mix-blend-mode: soft-light;
+      opacity: 0.7;
+    }
+
+    a { color: inherit; text-decoration: none; }
+    img { max-width: 100%; display: block; }
+
+    .wrap {
+      width: min(calc(100% - 2rem), var(--max));
+      margin: 0 auto;
+    }
+
+    .topbar {
+      position: sticky;
+      top: 0;
+      z-index: 30;
+      backdrop-filter: blur(14px);
+      background: rgba(8, 8, 8, 0.72);
+      border-bottom: 1px solid rgba(215,176,106,0.12);
+    }
+
+    .topbar .wrap {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      padding: 0.95rem 0;
+    }
+
+    .brand {
+      display: flex;
+      flex-direction: column;
+      gap: 0.15rem;
+    }
+
+    .brand small {
+      color: var(--muted);
+      text-transform: uppercase;
+      letter-spacing: 0.24rem;
+      font-size: 0.72rem;
+    }
+
+    .brand strong {
+      color: var(--ivory);
+      letter-spacing: 0.16rem;
+      font-size: 1.18rem;
+      font-weight: 700;
+    }
+
+    .brand span {
+      color: var(--gold);
+      text-transform: uppercase;
+      letter-spacing: 0.15rem;
+      font-size: 0.74rem;
+    }
+
+    .nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      align-items: center;
+    }
+
+    .nav a {
+      color: var(--muted);
+      font-size: 0.92rem;
+    }
+
+    .nav a:hover { color: var(--gold); }
+
+    .hero {
+      padding: 6.25rem 0 4rem;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.05fr 0.95fr;
+      gap: 2rem;
+      align-items: center;
+    }
+
+    .eyebrow {
+      display: inline-block;
+      padding: 0.45rem 0.84rem;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      background: rgba(215,176,106,0.06);
+      color: var(--gold);
+      text-transform: uppercase;
+      letter-spacing: 0.18rem;
+      font-size: 0.76rem;
+      margin-bottom: 1rem;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: clamp(2.8rem, 6vw, 6rem);
+      line-height: 0.95;
+      max-width: 8ch;
+    }
+
+    h1 .accent { color: var(--gold); }
+
+    .lede {
+      margin: 1.3rem 0 0;
+      color: var(--muted);
+      font-size: 1.1rem;
+      line-height: 1.85;
+      max-width: 40rem;
+    }
+
+    .actions {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+      margin-top: 2rem;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-width: 180px;
+      padding: 0.95rem 1.2rem;
+      border-radius: 999px;
+      border: 1px solid var(--line);
+      letter-spacing: 0.08rem;
+      text-transform: uppercase;
+      font-size: 0.92rem;
+      transition: 180ms ease;
+    }
+
+    .btn-primary {
+      background: linear-gradient(180deg, rgba(178,28,38,0.32), rgba(126,15,22,0.18));
+      box-shadow: 0 18px 40px rgba(0,0,0,0.36);
+    }
+
+    .btn-secondary {
+      background: rgba(255,255,255,0.02);
+      color: var(--muted);
+    }
+
+    .btn:hover {
+      transform: translateY(-2px);
+      border-color: rgba(215,176,106,0.5);
+      color: var(--ivory);
+    }
+
+    .hero-card {
+      position: relative;
+      min-height: 520px;
+      overflow: hidden;
+      border-radius: 30px;
+      border: 1px solid var(--line);
+      background: linear-gradient(180deg, rgba(255,255,255,0.03), rgba(255,255,255,0.01));
+      box-shadow: 0 28px 80px var(--shadow);
+    }
+
+    .hero-card::before {
+      content: "";
+      position: absolute;
+      inset: 16px;
+      border: 1px solid rgba(215,176,106,0.12);
+      border-radius: 22px;
+      pointer-events: none;
+      z-index: 2;
+    }
+
+    .hero-card img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .hero-overlay {
+      position: absolute;
+      inset: auto 0 0 0;
+      padding: 1.4rem;
+      z-index: 3;
+      background: linear-gradient(180deg, transparent, rgba(0,0,0,0.82));
+    }
+
+    .hero-overlay .stamp {
+      display: inline-block;
+      padding: 0.4rem 0.7rem;
+      margin-bottom: 0.7rem;
+      border-radius: 999px;
+      border: 1px solid rgba(215,176,106,0.3);
+      background: rgba(6,6,6,0.42);
+      color: var(--gold);
+      letter-spacing: 0.15rem;
+      text-transform: uppercase;
+      font-size: 0.72rem;
+    }
+
+    .hero-overlay h2 {
+      margin: 0;
+      font-size: 1.55rem;
+    }
+
+    section {
+      padding: 1.5rem 0 4rem;
+    }
+
+    .section-head {
+      display: flex;
+      align-items: end;
+      justify-content: space-between;
+      gap: 1rem;
+      margin-bottom: 1.4rem;
+    }
+
+    .section-head h2 {
+      margin: 0;
+      font-size: clamp(1.8rem, 4vw, 3rem);
+      line-height: 1;
+    }
+
+    .section-head p {
+      margin: 0;
+      max-width: 36rem;
+      color: var(--muted);
+      line-height: 1.75;
+    }
+
+    .kicker {
+      color: var(--gold);
+      letter-spacing: 0.16rem;
+      text-transform: uppercase;
+      font-size: 0.78rem;
+      margin-bottom: 0.7rem;
+    }
+
+    .story-grid,
+    .facts-grid,
+    .gallery-grid {
+      display: grid;
+      gap: 1.2rem;
+    }
+
+    .story-grid { grid-template-columns: 1.1fr 0.9fr; }
+    .facts-grid { grid-template-columns: repeat(3, 1fr); }
+    .gallery-grid { grid-template-columns: repeat(4, 1fr); }
+
+    .panel,
+    .tile,
+    .shot {
+      position: relative;
+      border-radius: 24px;
+      overflow: hidden;
+      border: 1px solid var(--line);
+      background: linear-gradient(180deg, rgba(255,255,255,0.03), rgba(255,255,255,0.01));
+      box-shadow: 0 22px 60px rgba(0,0,0,0.25);
+    }
+
+    .panel,
+    .tile { padding: 1.6rem; }
+
+    .panel::before,
+    .tile::before,
+    .shot::before {
+      content: "";
+      position: absolute;
+      inset: 14px;
+      border: 1px solid rgba(215,176,106,0.08);
+      border-radius: 16px;
+      pointer-events: none;
+      z-index: 2;
+    }
+
+    .quote {
+      font-size: clamp(1.35rem, 2.8vw, 2.15rem);
+      line-height: 1.48;
+      color: var(--ivory);
+    }
+
+    .quote strong { color: var(--gold); }
+
+    .panel p,
+    .tile p,
+    .meta li {
+      color: var(--muted);
+      line-height: 1.8;
+      font-size: 1rem;
+    }
+
+    .sku {
+      margin-top: 1rem;
+      font-family: "Courier New", Courier, monospace;
+      color: var(--gold);
+      padding: 0.92rem 1rem;
+      border-radius: 14px;
+      border: 1px solid var(--line);
+      background: rgba(215,176,106,0.05);
+      word-break: break-word;
+    }
+
+    .meta {
+      padding-left: 1.1rem;
+      margin: 1rem 0 0;
+    }
+
+    .shot {
+      aspect-ratio: 1 / 1.05;
+      background: #0a0a0a;
+    }
+
+    .shot img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 220ms ease;
+    }
+
+    .shot:hover img { transform: scale(1.03); }
+
+    .shot-label {
+      position: absolute;
+      left: 1rem;
+      bottom: 1rem;
+      z-index: 3;
+      padding: 0.36rem 0.65rem;
+      border-radius: 999px;
+      background: rgba(0,0,0,0.56);
+      border: 1px solid rgba(215,176,106,0.25);
+      color: var(--gold);
+      font-size: 0.72rem;
+      text-transform: uppercase;
+      letter-spacing: 0.14rem;
+    }
+
+    .footer {
+      padding: 2rem 0 4rem;
+      text-align: center;
+      color: var(--muted);
+    }
+
+    .footer strong {
+      color: var(--gold);
+      display: block;
+      letter-spacing: 0.18rem;
+      text-transform: uppercase;
+      margin-bottom: 0.65rem;
+    }
+
+    @media (max-width: 1100px) {
+      .gallery-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+
+    @media (max-width: 960px) {
+      .hero-grid,
+      .story-grid,
+      .facts-grid { grid-template-columns: 1fr; }
+      .section-head {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .topbar .wrap {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      .hero { padding-top: 4.6rem; }
+      .gallery-grid { grid-template-columns: 1fr; }
+      h1 { max-width: none; }
+      .hero-card { min-height: 420px; }
+    }
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    <div class="wrap">
+      <div class="brand">
+        <small>The Luxury Dice Authority</small>
+        <strong>GYRE &amp; WABE</strong>
+        <span>Coordinators of Chaos</span>
+      </div>
+      <nav class="nav">
+        <a href="#story">Lore</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#record">Record</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="wrap hero-grid">
+        <div>
+          <div class="eyebrow">Mimsy Realm • One of One</div>
+          <h1>Red Queen’s <span class="accent">Ruin</span></h1>
+          <p class="lede">
+            A regal collapse preserved in resin — crimson unrest, gilded menace, and the feeling that a throne has already been lost by the time you arrive. Red Queen’s Ruin is opulence after impact: elegant, dangerous, and impossible to mistake for anything ordinary.
+          </p>
+          <div class="actions">
+            <a class="btn btn-primary" href="#gallery">Enter the Gallery</a>
+            <a class="btn btn-secondary" href="#record">View Record</a>
+          </div>
+        </div>
+
+        <aside class="hero-card">
+          <img src="red1.jpg" alt="Red Queen's Ruin hero image" />
+          <div class="hero-overlay">
+            <span class="stamp">Featured View</span>
+            <h2>Crimson authority. Ruined beautifully.</h2>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section id="story">
+      <div class="wrap">
+        <div class="section-head">
+          <div>
+            <div class="kicker">Set Lore</div>
+            <h2>Luxury with teeth.</h2>
+          </div>
+          <p>
+            This set reads like royal command after the fracture — the last glow of a crown in a room that no longer obeys it.
+          </p>
+        </div>
+
+        <div class="story-grid">
+          <article class="panel">
+            <div class="kicker">Description</div>
+            <div class="quote">A set born from <strong>crimson tension</strong>, gilded fallout, and the kind of beauty that looks better after the damage is done.</div>
+            <p>
+              Red Queen’s Ruin belongs to the Gyre &amp; Wabe world of ordered chaos: a premium hand-cast set shaped by atmosphere, pressure, depth, and deliberate imbalance. It is theatrical without becoming costume, luxurious without losing menace.
+            </p>
+            <div class="sku">GW-QUEE-RQRN-RDGL-01-B01</div>
+          </article>
+
+          <aside class="panel" id="record">
+            <div class="kicker">Record</div>
+            <h2 style="margin:0 0 0.6rem; font-size:1.45rem;">Object Provenance</h2>
+            <ul class="meta">
+              <li>Name: Red Queen’s Ruin</li>
+              <li>House: Gyre &amp; Wabe</li>
+              <li>Designation: One of One</li>
+              <li>Realm: Mimsy</li>
+              <li>Classification: Luxury Resin Dice Set</li>
+            </ul>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="wrap">
+        <div class="section-head">
+          <div>
+            <div class="kicker">Attributes</div>
+            <h2>The read at a glance.</h2>
+          </div>
+          <p>
+            Use these panels as the editorial overview for the set on-site. They can stay or be tuned later to match the final listing copy.
+          </p>
+        </div>
+
+        <div class="facts-grid">
+          <article class="tile">
+            <div class="kicker">Mood</div>
+            <h3 style="margin:0 0 0.7rem;">Regal menace</h3>
+            <p>Commanding, expensive, and faintly hostile in exactly the right way.</p>
+          </article>
+          <article class="tile">
+            <div class="kicker">Finish</div>
+            <h3 style="margin:0 0 0.7rem;">Deep crimson play</h3>
+            <p>Built to catch light with depth, shadow, and movement rather than flat color alone.</p>
+          </article>
+          <article class="tile">
+            <div class="kicker">Identity</div>
+            <h3 style="margin:0 0 0.7rem;">Crown after impact</h3>
+            <p>Less fairy tale, more aftermath — the luxury remains, the mercy does not.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="gallery">
+      <div class="wrap">
+        <div class="section-head">
+          <div>
+            <div class="kicker">Gallery</div>
+            <h2>Eight-view spread.</h2>
+          </div>
+          <p>
+            All eight images are already wired in. Replace the files only if you want different crops; the page is ready to run.
+          </p>
+        </div>
+
+        <div class="gallery-grid">
+          <figure class="shot"><img src="red1.jpg" alt="Red Queen's Ruin photo 1" /><figcaption class="shot-label">red1</figcaption></figure>
+          <figure class="shot"><img src="red2.jpg" alt="Red Queen's Ruin photo 2" /><figcaption class="shot-label">red2</figcaption></figure>
+          <figure class="shot"><img src="red3.jpg" alt="Red Queen's Ruin photo 3" /><figcaption class="shot-label">red3</figcaption></figure>
+          <figure class="shot"><img src="red4.jpg" alt="Red Queen's Ruin photo 4" /><figcaption class="shot-label">red4</figcaption></figure>
+          <figure class="shot"><img src="red5.jpg" alt="Red Queen's Ruin photo 5" /><figcaption class="shot-label">red5</figcaption></figure>
+          <figure class="shot"><img src="red6.jpg" alt="Red Queen's Ruin photo 6" /><figcaption class="shot-label">red6</figcaption></figure>
+          <figure class="shot"><img src="red7.jpg" alt="Red Queen's Ruin photo 7" /><figcaption class="shot-label">red7</figcaption></figure>
+          <figure class="shot"><img src="red8.jpg" alt="Red Queen's Ruin photo 8" /><figcaption class="shot-label">red8</figcaption></figure>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap">
+      <strong>Gyre &amp; Wabe</strong>
+      <div>The Luxury Dice Authority • Coordinators of Chaos • EST 2026</div>
+    </div>
+  </footer>
+</body>
+</html>
