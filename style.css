@@ -44,6 +44,30 @@ img {
   max-width: 100%;
 }
 
+.site-bg-mark {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.site-bg-mark img {
+  width: min(78vw, 1100px);
+  height: auto;
+  opacity: 0.05;
+  filter: grayscale(1) contrast(1.1);
+  object-fit: contain;
+}
+
+body > *:not(.site-bg-mark) {
+  position: relative;
+  z-index: 1;
+}
+
 .utility-nav {
   position: sticky;
   top: 0;
@@ -195,7 +219,10 @@ img {
 
 .hero-panel,
 .panel,
-.registry-banner {
+.registry-banner,
+.manifesto-panel,
+.manifesto-side-panel,
+.lore-banner {
   border: 1px solid var(--line);
   border-radius: var(--radius-md);
   background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
@@ -207,7 +234,10 @@ img {
 }
 
 .hero-panel-inner,
-.panel {
+.panel,
+.manifesto-panel,
+.manifesto-side-panel,
+.lore-banner {
   padding: 24px;
 }
 
@@ -234,14 +264,53 @@ img {
 .section-head p,
 .registry-banner p,
 .lore,
-.detail-value {
+.detail-value,
+.manifesto-panel p,
+.lore-banner p {
   color: var(--muted);
   line-height: 1.9;
 }
 
+.manifesto-section,
+.lore-banner-section,
 .featured-section,
 .gallery-section {
   margin-top: 24px;
+}
+
+.manifesto-grid {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: 20px;
+}
+
+.manifesto-panel h2,
+.lore-banner h2 {
+  font-size: clamp(1.5rem, 3vw, 2.4rem);
+  line-height: 1.08;
+  margin-bottom: 16px;
+  color: var(--text);
+}
+
+.manifesto-panel p + p {
+  margin-top: 14px;
+}
+
+.doctrine-list {
+  list-style: none;
+  display: grid;
+  gap: 12px;
+}
+
+.doctrine-list li {
+  color: var(--text);
+  padding: 14px 16px;
+  border: 1px solid rgba(212,175,55,0.14);
+  border-radius: 14px;
+  background: rgba(212,175,55,0.04);
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-size: 0.82rem;
 }
 
 .section-head {
@@ -318,6 +387,7 @@ img {
   line-height: 1.85;
   font-size: 0.95rem;
   margin-bottom: 16px;
+  min-height: 5.5em;
 }
 
 .registry-banner {
@@ -461,7 +531,8 @@ img {
   }
 
   .hero-grid,
-  .artifact-layout {
+  .artifact-layout,
+  .manifesto-grid {
     grid-template-columns: 1fr;
   }
 }
@@ -492,7 +563,10 @@ img {
   .artifact-hero,
   .hero-panel-inner,
   .panel,
-  .registry-banner {
+  .registry-banner,
+  .manifesto-panel,
+  .manifesto-side-panel,
+  .lore-banner {
     padding: 20px;
   }
 
@@ -502,234 +576,6 @@ img {
     grid-template-columns: 1fr;
   }
 
-  <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Gyre &amp; Wabe | Luxury Dice Artifacts</title>
-  <meta
-    name="description"
-    content="Gyre &amp; Wabe creates one-of-one luxury resin dice artifacts. Enter the registry, explore the house archive, and discover authenticated originals."
-  />
-  <link rel="stylesheet" href="style.css" />
-</head>
-<body>
-  <div class="site-bg-mark" aria-hidden="true">
-    <img src="logo.png" alt="" />
-  </div>
-
-  <nav class="utility-nav">
-    <div class="utility-nav-inner">
-      <a class="brand-lockup" href="index.html">Gyre &amp; Wabe</a>
-      <div class="utility-links">
-        <a href="index.html">Home</a>
-        <a href="registry/index.html">Registry</a>
-      </div>
-    </div>
-  </nav>
-
-  <main class="wrap">
-    <section class="hero">
-      <div class="hero-grid">
-        <div class="hero-copy-block">
-          <div class="eyebrow">Luxury Dice Artifacts • EST 2026</div>
-          <h1>Coordinators of Chaos</h1>
-          <p class="hero-copy">
-            Gyre &amp; Wabe creates one-of-one resin dice artifacts issued as singular works of the house.
-            Each authenticated original is entered into the official registry and preserved as part of the living archive.
-            This is not inventory. This is authorship, atmosphere, and possession.
-          </p>
-
-          <div class="hero-pills">
-            <div class="pill">One of One</div>
-            <div class="pill">Authenticated Originals</div>
-            <div class="pill">Registry Linked</div>
-            <div class="pill">Luxury Artifact House</div>
-          </div>
-
-          <div class="hero-actions">
-            <a class="btn" href="registry/index.html">Enter the Registry</a>
-            <a class="btn-ghost" href="#featured-artifacts">View Artifacts</a>
-          </div>
-        </div>
-
-        <div class="hero-panel">
-          <div class="hero-panel-inner">
-            <div class="panel-label">House Archive</div>
-            <div class="panel-title">The Registry</div>
-            <p>
-              Every artifact issued by Gyre &amp; Wabe is preserved by designation, SKU, and archival record.
-              To enter the registry is to be recognized as an authentic original of the house.
-            </p>
-            <a class="panel-link" href="registry/index.html">Open Archive</a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="manifesto-section">
-      <div class="manifesto-grid">
-        <article class="manifesto-panel">
-          <div class="eyebrow">House Manifesto</div>
-          <h2>We do not make dice. We issue artifacts.</h2>
-          <p>
-            Gyre &amp; Wabe exists at the crossing of motion and mystery. We create one-of-one resin artifacts
-            for those who understand that beauty should feel dangerous, rare, and impossible to mistake for ordinary.
-            Every set is authored as a singular work of the house, never reduced to mere utility, never stripped of ceremony.
-          </p>
-          <p>
-            These are not accessories to play. They are objects of authorship, atmosphere, and possession.
-            Enter the archive. Claim what calls to you. Let the ordinary belong to someone else.
-          </p>
-        </article>
-
-        <aside class="manifesto-side-panel">
-          <div class="panel-label">House Doctrine</div>
-          <ul class="doctrine-list">
-            <li>One of One</li>
-            <li>Luxury without apology</li>
-            <li>Authenticated originals</li>
-            <li>Registry-bound provenance</li>
-            <li>Coordinators of Chaos</li>
-          </ul>
-        </aside>
-      </div>
-    </section>
-
-    <section class="lore-banner-section">
-      <div class="lore-banner">
-        <div class="eyebrow">Why They Sell</div>
-        <h2>Because possession feels different when the object has a pulse.</h2>
-        <p>
-          Buyers do not remember generic product. They remember atmosphere. They remember tension.
-          They remember the moment an artifact felt like it was already theirs before they clicked.
-          That is the work. Not inventory. Not content. Desire.
-        </p>
-      </div>
-    </section>
-
-    <section class="featured-section" id="featured-artifacts">
-      <div class="section-head">
-        <div>
-          <h2>Featured Artifacts</h2>
-          <p>Issued works of the house, each authored as a singular object of possession, atmosphere, and provenance.</p>
-        </div>
-      </div>
-
-      <div class="set-grid">
-        <a class="set-card" href="midnighthatter.html">
-          <div class="set-card-image">
-            <img src="mdht1.jpg" alt="Midnight Hatter dice set preview" />
-          </div>
-          <div class="set-card-copy">
-            <span class="set-card-realm">HATT Realm</span>
-            <h3>Midnight Hatter</h3>
-            <p>
-              A founding archive piece of shadow, ceremony, and late-hour opulence. Singular and authenticated.
-            </p>
-            <span class="set-card-link">Enter Artifact</span>
-          </div>
-        </a>
-
-        <a class="set-card" href="lookingglassember.html">
-          <div class="set-card-image">
-            <img src="loo1.jpg" alt="Looking-Glass Ember dice set preview" />
-          </div>
-          <div class="set-card-copy">
-            <span class="set-card-realm">WLGL Realm</span>
-            <h3>Looking-Glass Ember</h3>
-            <p>
-              Mirrored fire caught in resin — a one-of-one original charged with strange light and elegant danger.
-            </p>
-            <span class="set-card-link">Enter Artifact</span>
-          </div>
-        </a>
-
-        <a class="set-card" href="interstellar.html">
-          <div class="set-card-image">
-            <img src="ints8.jpg" alt="Interstellar dice set preview" />
-          </div>
-          <div class="set-card-copy">
-            <span class="set-card-realm">OBSC Realm</span>
-            <h3>Interstellar</h3>
-            <p>
-              A cosmic artifact of depth, motion, and void-lit color, preserved beneath the Gyre &amp; Wabe banner.
-            </p>
-            <span class="set-card-link">Enter Artifact</span>
-          </div>
-        </a>
-
-        <a class="set-card" href="boroglassblue.html">
-          <div class="set-card-image">
-            <img src="blu4.jpg" alt="Boroglass Blue dice set preview" />
-          </div>
-          <div class="set-card-copy">
-            <span class="set-card-realm">WLGL Realm</span>
-            <h3>Boroglass Blue</h3>
-            <p>
-              Precision, clarity, and luminous blue saturation resolved into a singular artifact of reflective calm.
-            </p>
-            <span class="set-card-link">Enter Artifact</span>
-          </div>
-        </a>
-
-        <a class="set-card" href="bandersmoke.html">
-          <div class="set-card-image">
-            <img src="bdsm1.jpg" alt="Bandersmoke dice set preview" />
-          </div>
-          <div class="set-card-copy">
-            <span class="set-card-realm">MIMS Realm</span>
-            <h3>Bandersmoke</h3>
-            <p>
-              Suspended shadow, drifting particulate, and controlled obscurity sealed into a one-of-one object of possession.
-            </p>
-            <span class="set-card-link">Enter Artifact</span>
-          </div>
-        </a>
-
-        <a class="set-card" href="redqueensruin.html">
-          <div class="set-card-image">
-            <img src="red1.jpg" alt="Red Queen's Ruin dice set preview" />
-          </div>
-          <div class="set-card-copy">
-            <span class="set-card-realm">QUEE Realm</span>
-            <h3>Red Queen's Ruin</h3>
-            <p>
-              Regal fracture, ceremonial collapse, and sovereign drama cast into a singular QUEE realm original.
-            </p>
-            <span class="set-card-link">Enter Artifact</span>
-          </div>
-        </a>
-      </div>
-    </section>
-
-    <section class="registry-banner">
-      <div class="registry-banner-copy">
-        <div class="eyebrow">Official Archive Access</div>
-        <h2>Every authenticated original has a record.</h2>
-        <p>
-          Explore the living archive of Gyre &amp; Wabe through the official registry.
-        </p>
-      </div>
-
-      <div class="registry-banner-actions">
-        <a class="btn" href="registry/index.html">Open Registry</a>
-      </div>
-    </section>
-
-    <footer class="site-footer">
-      <div class="footer-links">
-        <a href="index.html">Home</a>
-        <a href="registry/index.html">Registry</a>
-      </div>
-      <div class="footer-note">Gyre &amp; Wabe • Coordinators of Chaos • EST 2026</div>
-    </footer>
-  </main>
-
-  <script src="script.js"></script>
-</body>
-</html>
   .hero h1,
   .artifact-hero h1 {
     font-size: 2.3rem;
@@ -738,5 +584,14 @@ img {
   .registry-banner {
     flex-direction: column;
     align-items: flex-start;
+  }
+
+  .site-bg-mark img {
+    width: 120vw;
+    opacity: 0.045;
+  }
+
+  .set-card-copy p {
+    min-height: auto;
   }
 }
