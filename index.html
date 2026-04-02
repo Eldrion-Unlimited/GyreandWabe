@@ -3,442 +3,178 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Gyre &amp; Wabe | The Luxury Dice Authority</title>
+  <title>Gyre &amp; Wabe | Luxury Dice Artifacts</title>
   <meta
     name="description"
-    content="Gyre & Wabe creates collector-grade luxury resin dice for players, collectors, and beautifully dangerous storytellers. We coordinate chaos."
+    content="Gyre &amp; Wabe creates one-of-one luxury resin dice artifacts. Enter the registry, explore the house archive, and discover authenticated originals."
   />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@400;500;600;700;800&display=swap"
-    rel="stylesheet"
-  />
-  <link rel="preload" as="image" href="hero.png" />
-  <link rel="preload" as="image" href="ints8.jpg" />
-  <link rel="preload" as="image" href="red1.jpg" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <div class="site-shell">
-    <div class="noise"></div>
-    <div class="grid-overlay"></div>
-    <div class="glow glow-a"></div>
-    <div class="glow glow-b"></div>
+  <nav class="utility-nav">
+    <div class="utility-nav-inner">
+      <a class="brand-lockup" href="index.html">Gyre &amp; Wabe</a>
 
-    <header class="site-header">
-      <div class="brand-block">
-        <p class="brand-kicker">Gyre &amp; Wabe</p>
-        <a href="#top" class="brand-title">The Luxury Dice Authority</a>
+      <div class="utility-links">
+        <a href="index.html">Home</a>
+        <a href="registry/index.html">Registry</a>
+      </div>
+    </div>
+  </nav>
+
+  <main class="wrap">
+    <section class="hero">
+      <div class="hero-grid">
+        <div class="hero-copy">
+          <div class="eyebrow">Luxury Dice Artifacts • EST 2026</div>
+          <h1>Coordinators of Chaos</h1>
+          <p>
+            Gyre &amp; Wabe creates one-of-one resin dice artifacts issued as singular works of the house.
+            Each authenticated original is entered into the official registry and preserved as part of the living archive.
+          </p>
+
+          <div class="hero-pills">
+            <div class="pill">One of One</div>
+            <div class="pill">Authenticated Originals</div>
+            <div class="pill">Registry Linked</div>
+            <div class="pill">Luxury Artifact House</div>
+          </div>
+
+          <div class="hero-actions">
+            <a class="btn" href="registry/index.html">Enter the Registry</a>
+            <a class="btn-ghost" href="#featured-artifacts">View Artifacts</a>
+          </div>
+        </div>
+
+        <div class="hero-panel">
+          <div class="hero-panel-inner">
+            <div class="panel-label">House Archive</div>
+            <div class="panel-title">The Registry</div>
+            <p>
+              Every artifact issued by Gyre &amp; Wabe is preserved by designation, SKU, and archival record.
+            </p>
+            <a class="panel-link" href="registry/index.html">Open Archive</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="featured-section" id="featured-artifacts">
+      <div class="section-head">
+        <div>
+          <h2>Featured Artifacts</h2>
+          <p>Authenticated works of the house.</p>
+        </div>
       </div>
 
-      <nav class="main-nav">
-        <a href="#collections">Collections</a>
-        <a href="#manifesto">Manifesto</a>
-        <a href="#authority">Authority</a>
-        <a
-          href="https://www.etsy.com/shop/GyreAndWabe"
-          target="_blank"
-          rel="noreferrer"
-        >
-          Catalog
-        </a>
-      </nav>
-    </header>
-
-    <main id="top">
-      <section class="hero">
-        <div class="hero-copy">
-          <div class="eyebrow">
-            <span class="eyebrow-dot"></span>
-            <span>Coordinators of Chaos</span>
+      <div class="set-grid">
+        <a class="set-card" href="midnighthatter.html">
+          <div class="set-card-image">
+            <img src="mdht1.jpg" alt="Midnight Hatter dice set preview" />
           </div>
-
-          <p class="micro-line">
-            Lore / Craft / Clarity / Legacy
-          </p>
-
-          <h1>
-            Beautiful<br />
-            disorder,<br />
-            in luxury<br />
-            form.
-          </h1>
-
-          <p class="hero-text">
-            Gyre &amp; Wabe is a collector dice house where lore, material,
-            and atmosphere converge. Carrollian by bloodline, neurogrunge by
-            temperament, and luxury by execution — every release is a controlled
-            accident made desirable.
-          </p>
-
-          <div class="hero-actions" id="acquire">
-            <a
-              class="btn btn-solid"
-              href="https://www.etsy.com/shop/GyreAndWabe"
-              target="_blank"
-              rel="noreferrer"
-            >
-              Enter the Foundry
-            </a>
-            <a class="btn btn-ghost" href="#collections">
-              View the Six Active Listings
-            </a>
-          </div>
-
-          <div class="house-notes">
-            <article class="stat-card">
-              <p>Active listings</p>
-              <h3>6</h3>
-            </article>
-            <article class="stat-card">
-              <p>Catalog</p>
-              <h3>Etsy</h3>
-            </article>
-            <article class="stat-card">
-              <p>Point of sale</p>
-              <h3>Square</h3>
-            </article>
-            <article class="stat-card">
-              <p>Positioning</p>
-              <h3>Collector luxury</h3>
-            </article>
-          </div>
-        </div>
-
-        <div class="hero-visual">
-          <div class="hero-image-frame">
-            <img
-              src="hero.png"
-              alt="Gyre and Wabe luxury dice hero image"
-              loading="eager"
-              fetchpriority="high"
-              decoding="async"
-            />
-            <div class="hero-image-overlay"></div>
-          </div>
-
-          <div class="hero-side-card">
-            <p class="card-kicker">House Artifact</p>
-            <h2>A polished hallucination for the tabletop.</h2>
+          <div class="set-card-copy">
+            <span class="set-card-realm">HATT Realm</span>
+            <h3>Midnight Hatter</h3>
             <p>
-              Not cottagecore. Not novelty. Not hobby-shop energy. This is a
-              designer house for resin objects with bite.
+              A founding archive piece entered into the registry as an authenticated original.
             </p>
-            <span class="est">EST 2026</span>
+            <span class="set-card-link">Enter Artifact</span>
           </div>
-        </div>
-      </section>
+        </a>
 
-      <section class="manifesto-band" id="manifesto">
-        <div class="manifesto-intro">
-          <p class="section-kicker">Manifesto</p>
-          <h2>
-            We do not sell dice.<br />
-            We stage desire.
-          </h2>
-        </div>
-
-        <div class="manifesto-grid">
-          <article>We are not whimsical.</article>
-          <article>We are not rustic.</article>
-          <article>We are not handmade in the apologetic sense.</article>
-          <article>We are the Luxury Dice Authority.</article>
-          <article>We coordinate chaos.</article>
-          <article>We make resin feel ceremonial.</article>
-        </div>
-      </section>
-
-      <section class="collections-section" id="collections">
-        <div class="section-heading">
-          <div>
-            <p class="section-kicker">Collections</p>
-            <h2>The current six.</h2>
+        <a class="set-card" href="lookingglassember.html">
+          <div class="set-card-image">
+            <img src="loo1.jpg" alt="Looking-Glass Ember dice set preview" />
           </div>
-          <p class="section-body">
-            Presented like artifacts, not inventory. The catalog lives on Etsy,
-            while Square handles point-of-sale for direct acquisition.
-          </p>
-        </div>
+          <div class="set-card-copy">
+            <span class="set-card-realm">WLGL Realm</span>
+            <h3>Looking-Glass Ember</h3>
+            <p>
+              A one-of-one original entered under mirrored fire and strange light.
+            </p>
+            <span class="set-card-link">Enter Artifact</span>
+          </div>
+        </a>
 
-        <div class="collections-grid">
-          <article class="collection-card">
-            <div class="card-topline">
-              <div>
-                <p class="realm">Mimsy</p>
-                <h3>Bandersmoke</h3>
-              </div>
-              <span class="index-badge">01</span>
-            </div>
-            <div class="card-panel">
-              <p class="descriptor">A relic dragged through elegant ruin.</p>
-              <p class="aura">Catastrophe preserved in luxury resin.</p>
-            </div>
-            <div class="essence-block">
-              <p class="essence-label">Essence</p>
-              <p>images/bandersmoke/bdsm1.jpg</p>
-            </div>
-            <a
-              class="btn btn-card"
-              href="https://square.link/u/cMtA0tZi"
-              target="_blank"
-              rel="noreferrer"
-            >
-              Acquire Artifact
-            </a>
-          </article>
+        <a class="set-card" href="interstellar.html">
+          <div class="set-card-image">
+            <img src="ints8.jpg" alt="Interstellar dice set preview" />
+          </div>
+          <div class="set-card-copy">
+            <span class="set-card-realm">OBSC Realm</span>
+            <h3>Interstellar</h3>
+            <p>
+              A cosmic one-of-one artifact suspended beneath the Gyre &amp; Wabe banner.
+            </p>
+            <span class="set-card-link">Enter Artifact</span>
+          </div>
+        </a>
 
-          <article class="collection-card offset-card">
-            <div class="card-topline">
-              <div>
-                <p class="realm">Looking-Glass</p>
-                <h3>Looking-Glass Ember</h3>
-              </div>
-              <span class="index-badge">02</span>
-            </div>
+        <a class="set-card" href="boroglassblue.html">
+          <div class="set-card-image image-fallback">
+            <div class="fallback-text">Boroglass Blue</div>
+          </div>
+          <div class="set-card-copy">
+            <span class="set-card-realm">WLGL Realm</span>
+            <h3>Boroglass Blue</h3>
+            <p>
+              A documented original of depth and clarity preserved in the permanent archive.
+            </p>
+            <span class="set-card-link">Enter Artifact</span>
+          </div>
+        </a>
 
-            <div class="card-panel image-panel">
-              <img
-                src="loo1.jpg"
-                alt="Looking-Glass Ember luxury resin dice set by Gyre and Wabe"
-                loading="eager"
-                fetchpriority="high"
-                decoding="async"
-              />
-              <div class="card-image-overlay"></div>
-              <p class="descriptor">Heat trapped beneath polished skin.</p>
-              <p class="aura">What beauty looks like when it learns to burn.</p>
-            </div>
+        <a class="set-card" href="bandersmoke.html">
+          <div class="set-card-image">
+            <img src="bdsm1.jpg" alt="Bandersmoke dice set preview" />
+          </div>
+          <div class="set-card-copy">
+            <span class="set-card-realm">MIMS Realm</span>
+            <h3>Bandersmoke</h3>
+            <p>
+              Suspended shadow, drifting particulate, and controlled obscurity sealed into a singular artifact.
+            </p>
+            <span class="set-card-link">Enter Artifact</span>
+          </div>
+        </a>
 
-            <div class="essence-block">
-              <p class="essence-label">Essence</p>
-              <p>Ember</p>
-            </div>
+        <a class="set-card" href="redqueensruin.html">
+          <div class="set-card-image">
+            <img src="red1.jpg" alt="Red Queen's Ruin dice set preview" />
+          </div>
+          <div class="set-card-copy">
+            <span class="set-card-realm">QUEE Realm</span>
+            <h3>Red Queen's Ruin</h3>
+            <p>
+              A QUEE realm original of regal fracture, ceremonial collapse, and singular authorship.
+            </p>
+            <span class="set-card-link">Enter Artifact</span>
+          </div>
+        </a>
+      </div>
+    </section>
 
-            <a class="btn btn-card" href="lookingglassember.html">
-              View Artifact
-            </a>
-          </article>
-
-          <article class="collection-card">
-            <div class="card-topline">
-              <div>
-                <p class="realm">Obscure</p>
-                <h3>Interstellar</h3>
-              </div>
-              <span class="index-badge">03</span>
-            </div>
-
-            <div class="card-panel image-panel">
-              <img
-                src="ints8.jpg"
-                alt="Interstellar luxury resin dice set by Gyre and Wabe"
-                loading="eager"
-                fetchpriority="high"
-                decoding="async"
-              />
-              <div class="card-image-overlay"></div>
-              <p class="descriptor">Cosmic bloom under disciplined pressure.</p>
-              <p class="aura">Astral noise refined into a private ritual.</p>
-            </div>
-
-            <div class="essence-block">
-              <p class="essence-label">Essence</p>
-              <p>Mica ghost / magenta</p>
-            </div>
-            <a class="btn btn-card" href="interstellar.html">
-              View Artifact
-            </a>
-          </article>
-
-          <article class="collection-card">
-            <div class="card-topline">
-              <div>
-                <p class="realm">Looking-Glass</p>
-                <h3>Boroglass Blue</h3>
-              </div>
-              <span class="index-badge">04</span>
-            </div>
-            <div class="card-panel">
-              <p class="descriptor">Laboratory clarity dressed for seduction.</p>
-              <p class="aura">A specimen case with pulse.</p>
-            </div>
-            <div class="essence-block">
-              <p class="essence-label">Essence</p>
-              <p>Blue</p>
-            </div>
-            <a
-              class="btn btn-card"
-              href="https://square.link/u/HOKrbeqN"
-              target="_blank"
-              rel="noreferrer"
-            >
-              Acquire Artifact
-            </a>
-          </article>
-
-          <article class="collection-card offset-card">
-            <div class="card-topline">
-              <div>
-                <p class="realm">Hatter</p>
-                <h3>Midnight Hatter</h3>
-              </div>
-              <span class="index-badge">05</span>
-            </div>
-
-            <div class="card-panel image-panel">
-              <img
-                src="mdht1.jpg"
-                alt="Midnight Hatter luxury resin dice set by Gyre and Wabe"
-                loading="eager"
-                fetchpriority="high"
-                decoding="async"
-              />
-              <div class="card-image-overlay"></div>
-              <p class="descriptor">Black formalwear for a collapsing dream.</p>
-              <p class="aura">Mad elegance with a knife behind the grin.</p>
-            </div>
-
-            <div class="essence-block">
-              <p class="essence-label">Essence</p>
-              <p>Kaleidoscope flakes</p>
-            </div>
-
-            <a class="btn btn-card" href="midnighthatter.html">
-              View Artifact
-            </a>
-          </article>
-
-          <article class="collection-card offset-card">
-            <div class="card-topline">
-              <div>
-                <p class="realm">Queen</p>
-                <h3>Red Queen’s Ruin</h3>
-              </div>
-              <span class="index-badge">06</span>
-            </div>
-
-            <div class="card-panel image-panel">
-              <img
-                src="red1.jpg"
-                alt="Red Queen’s Ruin luxury resin dice set by Gyre and Wabe"
-                loading="eager"
-                fetchpriority="high"
-                decoding="async"
-              />
-              <div class="card-image-overlay"></div>
-              <p class="descriptor">Regal violence in collector form.</p>
-              <p class="aura">Authority sharpened until it gleams.</p>
-            </div>
-
-            <div class="essence-block">
-              <p class="essence-label">Essence</p>
-              <p>Mica pigment + foil flakes + mica ghost / magenta</p>
-            </div>
-            <a class="btn btn-card" href="redqueensruin.html">
-              View Artifact
-            </a>
-          </article>
-        </div>
-      </section>
-
-      <section class="authority-section" id="authority">
-        <article class="authority-card">
-          <h3>Wonderland, Distorted</h3>
-          <p>
-            The brand does not cosplay Alice. It weaponizes dream logic,
-            mirrored identities, courtly madness, and decadent tension.
-          </p>
-        </article>
-
-        <article class="authority-card">
-          <h3>Neurogrunge Precision</h3>
-          <p>
-            Texture, abrasion, signal decay, static, fracture, interference.
-            Disciplined by luxury composition and editorial restraint.
-          </p>
-        </article>
-
-        <article class="authority-card">
-          <h3>Seductive Authority</h3>
-          <p>
-            Not explicit. Not cheap. The energy is couture, dangerous, and
-            self-possessed. Black silk over broken architecture.
-          </p>
-        </article>
-
-        <article class="authority-card">
-          <h3>Commerce Architecture</h3>
-          <p>
-            Etsy remains the public-facing catalog, while Square functions as
-            the point of sale for direct purchase. Discovery stays curated.
-            Checkout stays clean.
-          </p>
-        </article>
-      </section>
-
-      <section class="closing-section">
-        <div class="closing-copy">
-          <p class="section-kicker">Closing Signal</p>
-          <h2>
-            Own the object.<br />
-            Command the table.
-          </h2>
-          <p>
-            Gyre &amp; Wabe creates collector-grade resin dice with luxury
-            composition, mythic naming, and controlled chaos at the core.
-          </p>
-        </div>
-
-        <div class="closing-actions">
-          <a
-            class="btn btn-solid"
-            href="https://www.etsy.com/shop/GyreAndWabe"
-            target="_blank"
-            rel="noreferrer"
-          >
-            Enter the Foundry
-          </a>
-          <a
-            class="btn btn-ghost"
-            href="https://www.instagram.com/gyreandwabe"
-            target="_blank"
-            rel="noreferrer"
-          >
-            Enter Instagram
-          </a>
-        </div>
-      </section>
-    </main>
-
-    <footer class="site-footer">
-      <div>
-        <p class="brand-kicker">Gyre &amp; Wabe</p>
-        <p class="footer-copy">
-          Luxury resin dice. Collector objects. Coordinated chaos.
+    <section class="registry-banner">
+      <div class="registry-banner-copy">
+        <div class="eyebrow">Official Archive Access</div>
+        <h2>Every authenticated original has a record.</h2>
+        <p>
+          Explore the living archive of Gyre &amp; Wabe through the official registry.
         </p>
       </div>
 
-      <div class="footer-links">
-        <a
-          href="https://www.instagram.com/gyreandwabe"
-          target="_blank"
-          rel="noreferrer"
-        >
-          Instagram
-        </a>
-        <a
-          href="https://www.etsy.com/shop/GyreAndWabe"
-          target="_blank"
-          rel="noreferrer"
-        >
-          Catalog
-        </a>
-        <a href="index.html#collections">
-          Collections
-        </a>
+      <div class="registry-banner-actions">
+        <a class="btn" href="registry/index.html">Open Registry</a>
       </div>
+    </section>
+
+    <footer class="site-footer">
+      <div class="footer-links">
+        <a href="index.html">Home</a>
+        <a href="registry/index.html">Registry</a>
+      </div>
+      <div class="footer-note">Gyre &amp; Wabe • Coordinators of Chaos • EST 2026</div>
     </footer>
-  </div>
+  </main>
 </body>
 </html>
