@@ -10,138 +10,250 @@
   />
   <style>
     :root {
-      --bg: #070707;
-      --bg2: #0d0d0d;
-      --panel: #121212;
-      --panel2: #181818;
+      --bg: #060606;
+      --bg-deep: #0b0b0b;
+      --panel: rgba(18, 18, 18, 0.92);
       --gold: #d4af37;
-      --gold-soft: #b8941f;
-      --text: #f4efe2;
+      --gold-bright: #f0d77a;
+      --ivory: #f4efe2;
       --muted: #b8ac87;
-      --line: rgba(212, 175, 55, 0.24);
-      --shadow: 0 18px 50px rgba(0, 0, 0, 0.45);
+      --line: rgba(212, 175, 55, 0.22);
+      --line-strong: rgba(212, 175, 55, 0.4);
+      --shadow: 0 22px 60px rgba(0, 0, 0, 0.5);
+      --radius-lg: 28px;
+      --radius-md: 22px;
+      --max: 1240px;
     }
 
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
-    html {
-      scroll-behavior: smooth;
-    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
 
     body {
       min-height: 100vh;
       font-family: Georgia, "Times New Roman", serif;
-      color: var(--text);
-      background:
-        radial-gradient(circle at top, rgba(212,175,55,0.08), transparent 30%),
-        linear-gradient(180deg, #050505 0%, #0b0b0b 45%, #070707 100%);
+      color: var(--ivory);
       letter-spacing: 0.02em;
+      background:
+        radial-gradient(circle at top center, rgba(212, 175, 55, 0.08), transparent 26%),
+        radial-gradient(circle at bottom left, rgba(212, 175, 55, 0.04), transparent 22%),
+        linear-gradient(180deg, #040404 0%, #0b0b0b 48%, #070707 100%);
+    }
+
+    a { color: inherit; text-decoration: none; }
+
+    .utility-nav {
+      position: sticky;
+      top: 0;
+      z-index: 999;
+      backdrop-filter: blur(14px);
+      background: rgba(7, 7, 7, 0.82);
+      border-bottom: 1px solid rgba(212, 175, 55, 0.18);
+    }
+
+    .utility-nav-inner {
+      width: min(var(--max), calc(100% - 28px));
+      margin: 0 auto;
+      min-height: 72px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+    }
+
+    .brand-lockup {
+      color: var(--gold);
+      text-transform: uppercase;
+      letter-spacing: 0.24em;
+      font-size: 0.8rem;
+    }
+
+    .utility-links {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .utility-links a {
+      color: var(--ivory);
+      border: 1px solid rgba(212, 175, 55, 0.18);
+      background: rgba(212, 175, 55, 0.06);
+      padding: 10px 14px;
+      border-radius: 999px;
+      font-size: 0.76rem;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      transition: transform 0.18s ease, border-color 0.18s ease, background 0.18s ease;
+    }
+
+    .utility-links a:hover {
+      transform: translateY(-1px);
+      border-color: rgba(212, 175, 55, 0.42);
+      background: rgba(212, 175, 55, 0.12);
     }
 
     .wrap {
-      width: min(1200px, calc(100% - 32px));
+      width: min(var(--max), calc(100% - 28px));
       margin: 0 auto;
-      padding: 32px 0 80px;
+      padding: 26px 0 80px;
     }
 
-    .crest {
-      text-align: center;
+    .topline {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+      flex-wrap: wrap;
       color: var(--muted);
-      font-size: 0.82rem;
-      letter-spacing: 0.34em;
+      margin: 18px 0;
+      font-size: 0.78rem;
       text-transform: uppercase;
-      margin-bottom: 18px;
+      letter-spacing: 0.28em;
     }
 
     .hero {
-      border: 1px solid var(--line);
-      border-radius: 24px;
-      padding: 48px 28px 32px;
-      background: linear-gradient(180deg, rgba(212,175,55,0.08), rgba(255,255,255,0.01));
-      box-shadow: var(--shadow);
       position: relative;
       overflow: hidden;
+      border: 1px solid var(--line);
+      border-radius: var(--radius-lg);
+      box-shadow: var(--shadow);
+      background:
+        linear-gradient(180deg, rgba(212, 175, 55, 0.08), rgba(255,255,255,0.01)),
+        linear-gradient(135deg, rgba(255,255,255,0.02), rgba(255,255,255,0));
+      padding: 32px;
     }
 
-    .hero::before {
-      content: "";
-      position: absolute;
-      inset: 0;
-      background:
-        linear-gradient(120deg, transparent 0%, rgba(212,175,55,0.06) 45%, transparent 100%);
-      pointer-events: none;
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 320px 1fr;
+      gap: 28px;
+      align-items: stretch;
+    }
+
+    .logo-panel {
+      border: 1px solid var(--line);
+      border-radius: 24px;
+      background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+      min-height: 340px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 28px;
+      text-align: center;
+    }
+
+    .sig-mark {
+      width: 100%;
+      border: 1px dashed rgba(212,175,55,0.24);
+      border-radius: 18px;
+      padding: 34px 18px;
+      margin-bottom: 18px;
+    }
+
+    .sig-mark .mark-main {
+      font-size: 1.1rem;
+      color: var(--gold);
+      text-transform: uppercase;
+      letter-spacing: 0.38em;
+      margin-bottom: 12px;
+    }
+
+    .sig-mark .mark-sub {
+      color: var(--muted);
+      font-size: 0.84rem;
+      line-height: 1.8;
+      letter-spacing: 0.08em;
+    }
+
+    .logo-note {
+      color: var(--muted);
+      font-size: 0.84rem;
+      line-height: 1.85;
+      max-width: 230px;
     }
 
     .eyebrow {
       color: var(--gold);
       text-transform: uppercase;
-      letter-spacing: 0.34em;
+      letter-spacing: 0.36em;
       font-size: 0.78rem;
-      margin-bottom: 14px;
-      position: relative;
-      z-index: 1;
+      margin-bottom: 16px;
     }
 
     h1 {
-      font-size: clamp(2.2rem, 5vw, 4.5rem);
-      line-height: 1;
-      margin-bottom: 14px;
-      position: relative;
-      z-index: 1;
+      font-size: clamp(2.5rem, 6vw, 5rem);
+      line-height: 0.96;
+      margin-bottom: 16px;
     }
 
-    .hero p {
-      max-width: 840px;
+    .hero-copy p {
+      max-width: 760px;
       color: var(--muted);
       font-size: 1rem;
-      line-height: 1.9;
-      position: relative;
-      z-index: 1;
+      line-height: 1.95;
+      margin-bottom: 22px;
     }
 
     .hero-pills {
       display: flex;
       flex-wrap: wrap;
       gap: 10px;
-      margin-top: 24px;
-      position: relative;
-      z-index: 1;
     }
 
     .pill {
       border: 1px solid var(--line);
       background: rgba(212,175,55,0.08);
-      color: var(--text);
+      color: var(--ivory);
       border-radius: 999px;
       padding: 10px 14px;
-      font-size: 0.8rem;
+      font-size: 0.76rem;
       text-transform: uppercase;
-      letter-spacing: 0.08em;
+      letter-spacing: 0.11em;
+    }
+
+    .charter {
+      margin-top: 20px;
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      gap: 18px;
+    }
+
+    .panel {
+      border: 1px solid var(--line);
+      border-radius: var(--radius-md);
+      background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+      box-shadow: var(--shadow);
+      padding: 24px;
+    }
+
+    .panel h2, .section-head h3 {
+      color: var(--gold);
+      font-size: 0.88rem;
+      text-transform: uppercase;
+      letter-spacing: 0.28em;
+      margin-bottom: 16px;
+    }
+
+    .panel p, .section-head p {
+      color: var(--muted);
+      line-height: 1.9;
+      font-size: 0.97rem;
+    }
+
+    .declaration {
+      color: var(--ivory);
+      font-size: 1.04rem;
+      line-height: 1.95;
     }
 
     .section-head {
-      margin: 34px 0 18px;
       display: flex;
       justify-content: space-between;
       align-items: end;
-      gap: 16px;
+      gap: 18px;
       flex-wrap: wrap;
-    }
-
-    .section-head h2 {
-      color: var(--gold);
-      font-size: 0.9rem;
-      text-transform: uppercase;
-      letter-spacing: 0.28em;
-    }
-
-    .section-head p {
-      color: var(--muted);
-      font-size: 0.92rem;
+      margin: 34px 0 18px;
     }
 
     .registry-grid {
@@ -151,50 +263,51 @@
     }
 
     .card {
-      background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
-      border: 1px solid var(--line);
-      border-radius: 22px;
-      padding: 22px;
-      box-shadow: var(--shadow);
       display: flex;
       flex-direction: column;
       gap: 14px;
-      transition: transform 0.18s ease, border-color 0.18s ease;
+      border: 1px solid var(--line);
+      border-radius: var(--radius-md);
+      padding: 22px;
+      background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+      box-shadow: var(--shadow);
+      transition: transform 0.2s ease, border-color 0.2s ease;
     }
 
     .card:hover {
-      transform: translateY(-3px);
-      border-color: rgba(212,175,55,0.42);
+      transform: translateY(-4px);
+      border-color: var(--line-strong);
     }
 
     .card-top {
       display: flex;
       justify-content: space-between;
       align-items: start;
-      gap: 12px;
+      gap: 10px;
+      flex-wrap: wrap;
     }
 
     .registry-id {
       color: var(--gold);
-      font-size: 0.78rem;
-      letter-spacing: 0.18em;
+      font-size: 0.77rem;
       text-transform: uppercase;
+      letter-spacing: 0.18em;
     }
 
     .status {
       border: 1px solid var(--line);
-      border-radius: 999px;
-      padding: 7px 10px;
-      font-size: 0.72rem;
       color: var(--muted);
+      border-radius: 999px;
+      padding: 7px 11px;
+      font-size: 0.7rem;
       text-transform: uppercase;
-      letter-spacing: 0.12em;
+      letter-spacing: 0.14em;
       white-space: nowrap;
     }
 
-    .card h3 {
+    .card h4 {
       font-size: 1.55rem;
-      line-height: 1.1;
+      line-height: 1.08;
     }
 
     .meta {
@@ -206,218 +319,218 @@
     }
 
     .meta strong {
-      color: var(--text);
+      color: var(--ivory);
       font-weight: normal;
     }
 
     .blurb {
-      color: var(--text);
-      line-height: 1.85;
+      color: var(--ivory);
       font-size: 0.95rem;
+      line-height: 1.9;
     }
 
     .actions {
       margin-top: auto;
-      padding-top: 8px;
+      padding-top: 6px;
     }
 
     .btn {
       display: inline-block;
-      text-decoration: none;
-      color: #111;
-      background: linear-gradient(180deg, #e6c558, #c99d25);
-      padding: 12px 18px;
       border-radius: 999px;
-      font-size: 0.82rem;
-      text-transform: uppercase;
-      letter-spacing: 0.12em;
+      padding: 12px 18px;
+      background: linear-gradient(180deg, #f0d77a, #c99d25);
+      color: #111;
+      font-size: 0.78rem;
       font-weight: bold;
-    }
-
-    .btn:hover {
-      filter: brightness(1.05);
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
     }
 
     .footer {
       margin-top: 40px;
       border-top: 1px solid var(--line);
-      padding-top: 22px;
+      padding-top: 20px;
       text-align: center;
       color: var(--muted);
-      font-size: 0.82rem;
+      font-size: 0.8rem;
       text-transform: uppercase;
-      letter-spacing: 0.16em;
+      letter-spacing: 0.18em;
+      line-height: 1.8;
     }
 
-    @media (max-width: 980px) {
-      .registry-grid {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-      }
+    @media (max-width: 1080px) {
+      .registry-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    }
+
+    @media (max-width: 920px) {
+      .hero-grid, .charter { grid-template-columns: 1fr; }
+      .logo-panel { min-height: 220px; }
     }
 
     @media (max-width: 680px) {
-      .registry-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .hero {
-        padding: 36px 22px 24px;
-      }
-
-      .card {
-        padding: 20px;
-      }
-
-      .card-top {
+      .utility-nav-inner, .wrap { width: calc(100% - 20px); }
+      .utility-nav-inner {
+        min-height: auto;
+        padding: 12px 0;
         flex-direction: column;
+        align-items: flex-start;
       }
+      .utility-links { width: 100%; }
+      .utility-links a { flex: 1 1 auto; text-align: center; }
+      .hero { padding: 22px; }
+      .panel, .card { padding: 20px; }
+      .registry-grid { grid-template-columns: 1fr; }
+      h1 { font-size: 2.3rem; }
     }
   </style>
 </head>
 <body>
+  <nav class="utility-nav">
+    <div class="utility-nav-inner">
+      <a class="brand-lockup" href="../index.html">Gyre &amp; Wabe</a>
+      <div class="utility-links">
+        <a href="index.html">Registry</a>
+        <a href="../shop.html">Shop</a>
+        <a href="../index.html">Home</a>
+      </div>
+    </div>
+  </nav>
+
   <main class="wrap">
-    <div class="crest">Gyre &amp; Wabe Registry</div>
+    <div class="topline">
+      <div>Gyre &amp; Wabe</div>
+      <div>Official Registry • EST 2026</div>
+    </div>
 
     <section class="hero">
-      <div class="eyebrow">Official House Archive</div>
-      <h1>The Registry</h1>
-      <p>
-        The Gyre &amp; Wabe Registry serves as the official archive of authenticated artifacts issued by the house.
-        Each entry records a distinct work by registry designation, SKU, realm, edition status, and archival note.
-        To be entered into the Registry is to be recognized as an authentic original of Gyre &amp; Wabe.
-      </p>
+      <div class="hero-grid">
+        <div class="logo-panel">
+          <div class="sig-mark">
+            <div class="mark-main">House Mark</div>
+            <div class="mark-sub">Replace this with your logo, signature, or trident seal.</div>
+          </div>
+          <div class="logo-note">This panel is reserved for the visual seal of the house.</div>
+        </div>
 
-      <div class="hero-pills">
-        <div class="pill">Authenticated Artifacts</div>
-        <div class="pill">One of One</div>
-        <div class="pill">EST 2026</div>
-        <div class="pill">Living Archive</div>
+        <div class="hero-copy">
+          <div class="eyebrow">Official House Archive</div>
+          <h1>The Registry</h1>
+          <p>
+            The Gyre &amp; Wabe Registry is the official archive of authenticated artifacts issued by the house.
+            Each entry records a distinct work by registry designation, SKU, realm, edition status, and archival note.
+            To be entered into the Registry is to be recognized as an authentic original of Gyre &amp; Wabe.
+          </p>
+
+          <div class="hero-pills">
+            <div class="pill">Authenticated Artifacts</div>
+            <div class="pill">One of One</div>
+            <div class="pill">Living Archive</div>
+            <div class="pill">NFC Linked</div>
+          </div>
+        </div>
       </div>
     </section>
 
+    <section class="charter">
+      <article class="panel">
+        <h2>Registry Charter</h2>
+        <p class="declaration">
+          The Registry exists to identify, preserve, and authenticate the issued works of Gyre &amp; Wabe.
+          Every recorded entry stands as part of the permanent house archive and serves as a recognized document
+          of origin, designation, and authorship.
+        </p>
+      </article>
+
+      <aside class="panel">
+        <h2>Archive Standard</h2>
+        <p>
+          Entries are organized by registry number, mapped to SKU, and preserved as official records of the house.
+          This archive distinguishes authentic originals, reinforces provenance, and establishes continuity across future releases.
+        </p>
+      </aside>
+    </section>
+
     <section class="section-head">
-      <h2>Archive Entries</h2>
-      <p>Founding registry sequence, 2026.</p>
+      <h3>Founding Sequence</h3>
+      <p>The opening registry sequence for 2026. Six authenticated originals entered into the archive.</p>
     </section>
 
     <section class="registry-grid">
       <article class="card">
-        <div class="card-top">
-          <div class="registry-id">GWR-2026-0001</div>
-          <div class="status">FORGED</div>
-        </div>
-        <h3>Midnight Hatter</h3>
+        <div class="card-top"><div class="registry-id">GWR-2026-0001</div><div class="status">FORGED</div></div>
+        <h4>Midnight Hatter</h4>
         <div class="meta">
           <div><strong>SKU:</strong> GW-MIMS-MDHT-KF-01-B01</div>
           <div><strong>Realm:</strong> MIMS</div>
           <div><strong>Edition:</strong> ONE OF ONE</div>
         </div>
-        <p class="blurb">
-          A founding archive piece entered into the Registry as a singular artifact of the MIMS realm.
-        </p>
-        <div class="actions">
-          <a class="btn" href="GWR-2026-0001.html">View Entry</a>
-        </div>
+        <p class="blurb">A founding archive piece entered into the Registry as a singular artifact of the MIMS realm.</p>
+        <div class="actions"><a class="btn" href="GWR-2026-0001.html">View Entry</a></div>
       </article>
 
       <article class="card">
-        <div class="card-top">
-          <div class="registry-id">GWR-2026-0002</div>
-          <div class="status">FORGED</div>
-        </div>
-        <h3>Looking-Glass Ember</h3>
+        <div class="card-top"><div class="registry-id">GWR-2026-0002</div><div class="status">FORGED</div></div>
+        <h4>Looking-Glass Ember</h4>
         <div class="meta">
           <div><strong>SKU:</strong> GW-WLGL-LOOK-EMBR-01-B01</div>
           <div><strong>Realm:</strong> WLGL</div>
           <div><strong>Edition:</strong> ONE OF ONE</div>
         </div>
-        <p class="blurb">
-          A verified original entered into the Registry under the mirrored fire and strange light of WLGL.
-        </p>
-        <div class="actions">
-          <a class="btn" href="GWR-2026-0002.html">View Entry</a>
-        </div>
+        <p class="blurb">A verified original entered into the Registry under mirrored fire and strange light.</p>
+        <div class="actions"><a class="btn" href="GWR-2026-0002.html">View Entry</a></div>
       </article>
 
       <article class="card">
-        <div class="card-top">
-          <div class="registry-id">GWR-2026-0003</div>
-          <div class="status">FORGED</div>
-        </div>
-        <h3>Interstellar</h3>
+        <div class="card-top"><div class="registry-id">GWR-2026-0003</div><div class="status">FORGED</div></div>
+        <h4>Interstellar</h4>
         <div class="meta">
           <div><strong>SKU:</strong> GW-MIMS-STCH-MG-01-B01</div>
           <div><strong>Realm:</strong> MIMS</div>
           <div><strong>Edition:</strong> ONE OF ONE</div>
         </div>
-        <p class="blurb">
-          A cosmic archive artifact recorded as a singular work beneath the Gyre &amp; Wabe banner.
-        </p>
-        <div class="actions">
-          <a class="btn" href="GWR-2026-0003.html">View Entry</a>
-        </div>
+        <p class="blurb">A cosmic archive artifact recorded as a singular work beneath the Gyre &amp; Wabe banner.</p>
+        <div class="actions"><a class="btn" href="GWR-2026-0003.html">View Entry</a></div>
       </article>
 
       <article class="card">
-        <div class="card-top">
-          <div class="registry-id">GWR-2026-0004</div>
-          <div class="status">FORGED</div>
-        </div>
-        <h3>Boroglass Blue</h3>
+        <div class="card-top"><div class="registry-id">GWR-2026-0004</div><div class="status">FORGED</div></div>
+        <h4>Boroglass Blue</h4>
         <div class="meta">
           <div><strong>SKU:</strong> GW-MIMS-BRGL-BLU-01-B01</div>
           <div><strong>Realm:</strong> MIMS</div>
           <div><strong>Edition:</strong> ONE OF ONE</div>
         </div>
-        <p class="blurb">
-          A documented original of depth and clarity, entered into the house archive as a verified artifact.
-        </p>
-        <div class="actions">
-          <a class="btn" href="GWR-2026-0004.html">View Entry</a>
-        </div>
+        <p class="blurb">A documented original of depth and clarity, entered into the house archive as a verified artifact.</p>
+        <div class="actions"><a class="btn" href="GWR-2026-0004.html">View Entry</a></div>
       </article>
 
       <article class="card">
-        <div class="card-top">
-          <div class="registry-id">GWR-2026-0005</div>
-          <div class="status">FORGED</div>
-        </div>
-        <h3>Bandersmoke</h3>
+        <div class="card-top"><div class="registry-id">GWR-2026-0005</div><div class="status">FORGED</div></div>
+        <h4>Bandersmoke</h4>
         <div class="meta">
           <div><strong>SKU:</strong> GW-MIMS-BDSM-GF+BK-01-B01</div>
           <div><strong>Realm:</strong> MIMS</div>
           <div><strong>Edition:</strong> ONE OF ONE</div>
         </div>
-        <p class="blurb">
-          Suspended shadow and shifting particulate, sealed into the archive as an authenticated original.
-        </p>
-        <div class="actions">
-          <a class="btn" href="GWR-2026-0005.html">View Entry</a>
-        </div>
+        <p class="blurb">Suspended shadow and shifting particulate, sealed into the archive as an authenticated original.</p>
+        <div class="actions"><a class="btn" href="GWR-2026-0005.html">View Entry</a></div>
       </article>
 
       <article class="card">
-        <div class="card-top">
-          <div class="registry-id">GWR-2026-0006</div>
-          <div class="status">FORGED</div>
-        </div>
-        <h3>Heads Will Roll</h3>
+        <div class="card-top"><div class="registry-id">GWR-2026-0006</div><div class="status">FORGED</div></div>
+        <h4>Heads Will Roll</h4>
         <div class="meta">
           <div><strong>SKU:</strong> GW-QUEE-HDWR-OB+MC-01-B01</div>
           <div><strong>Realm:</strong> QUEE</div>
           <div><strong>Edition:</strong> ONE OF ONE</div>
         </div>
-        <p class="blurb">
-          A QUEE realm artifact marked by old-blood drama and entered into the Registry as a singular original.
-        </p>
-        <div class="actions">
-          <a class="btn" href="GWR-2026-0006.html">View Entry</a>
-        </div>
+        <p class="blurb">A QUEE realm artifact marked by old-blood drama and entered into the Registry as a singular original.</p>
+        <div class="actions"><a class="btn" href="GWR-2026-0006.html">View Entry</a></div>
       </article>
     </section>
 
     <footer class="footer">
-      Coordinators of Chaos &nbsp;•&nbsp; Gyre &amp; Wabe &nbsp;•&nbsp; Official Registry
+      Coordinators of Chaos • Gyre &amp; Wabe • Official Registry
     </footer>
   </main>
 </body>
