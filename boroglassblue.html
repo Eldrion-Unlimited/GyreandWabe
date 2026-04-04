@@ -4,17 +4,24 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Boroglass Blue | Gyre &amp; Wabe</title>
-  <meta name="description" content="Boroglass Blue by Gyre &amp; Wabe. A one-of-one luxury resin dice artifact entered into the official registry." />
+  <meta
+    name="description"
+    content="Boroglass Blue by Gyre &amp; Wabe. A one-of-one luxury resin dice artifact available for acquisition."
+  />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+  <div class="site-bg-mark" aria-hidden="true">
+    <img src="logo.png" alt="" />
+  </div>
+
   <nav class="utility-nav">
     <div class="utility-nav-inner">
       <a class="brand-lockup" href="index.html">Gyre &amp; Wabe</a>
       <div class="utility-links">
         <a href="index.html">Home</a>
         <a href="registry/index.html">Registry</a>
-        <a href="registry/GWR-2026-0004.html">Registry Entry</a>
+        <a href="house.html">The House</a>
       </div>
     </div>
   </nav>
@@ -24,19 +31,20 @@
       <div class="eyebrow">WLGL Realm • One of One</div>
       <h1>Boroglass Blue</h1>
       <p class="hero-copy">
-        A documented original of depth and clarity, Boroglass Blue stands as a singular artifact of reflected light, controlled color, and preserved form. Entered into the Gyre &amp; Wabe Registry as an authenticated original, it occupies a precise and luminous place in the house archive.
+        A documented original of depth and clarity, Boroglass Blue stands as a singular artifact of reflected light, controlled color, and preserved form. Entered into the Gyre &amp; Wabe archive as an authenticated original, it occupies a precise and luminous place in the house archive.
       </p>
 
       <div class="hero-pills">
         <div class="pill">GW-WLGL-BRGL-BLU-01-B01</div>
-        <div class="pill">GWR-2026-0004</div>
         <div class="pill">One of One</div>
-        <div class="pill">Aquired</div>
+        <div class="pill">Authenticated Original</div>
+        <div class="pill">Available</div>
       </div>
 
       <div class="hero-actions">
-        <a class="btn" href="registry/GWR-2026-0004.html">View Registry Entry</a>
+        <a class="btn" href="https://square.link/u/HOKrbeqN" target="_blank" rel="noreferrer">Purchase Now</a>
         <a class="btn-ghost" href="#gallery">View Gallery</a>
+        <a class="btn-ghost" href="registry/index.html">Enter the Registry</a>
       </div>
     </section>
 
@@ -75,13 +83,13 @@
           </div>
 
           <div class="detail-row">
-            <div class="detail-label">SKU</div>
-            <div class="detail-value">GW-WLGL-BRGL-BLU-01-B01</div>
+            <div class="detail-label">Realm</div>
+            <div class="detail-value">WLGL</div>
           </div>
 
           <div class="detail-row">
-            <div class="detail-label">Registry ID</div>
-            <div class="detail-value">GWR-2026-0004</div>
+            <div class="detail-label">SKU</div>
+            <div class="detail-value">GW-WLGL-BRGL-BLU-01-B01</div>
           </div>
 
           <div class="detail-row">
@@ -91,7 +99,7 @@
 
           <div class="detail-row">
             <div class="detail-label">Status</div>
-            <div class="detail-value">Aquired</div>
+            <div class="detail-value">Available for Acquisition</div>
           </div>
 
           <div class="detail-row">
@@ -100,6 +108,10 @@
               Documented original of depth and clarity. Boroglass Blue occupies a luminous position in the archive, where transparency, blue saturation, and reflective structure resolve into a singular read.
             </div>
           </div>
+        </div>
+
+        <div class="hero-actions">
+          <a class="btn" href="https://square.link/u/HOKrbeqN" target="_blank" rel="noreferrer">Purchase Now</a>
         </div>
       </aside>
     </section>
@@ -123,15 +135,38 @@
       </div>
     </section>
 
-    <section class="footer-links">
-      <a href="registry/GWR-2026-0004.html">Return to Registry Entry</a>
-      <a href="registry/index.html">Return to Registry</a>
-      <a href="index.html">Home</a>
+    <section class="registry-banner">
+      <div class="registry-banner-copy">
+        <div class="eyebrow">House Read</div>
+        <h2>Clarity, saturation, and reflective calm.</h2>
+        <p>
+          Boroglass Blue is for the collector who wants luminous precision — transparency with presence, blue depth without noise, and structure that reads as deliberate from every angle.
+        </p>
+      </div>
+
+      <div class="registry-banner-actions">
+        <a class="btn" href="https://square.link/u/HOKrbeqN" target="_blank" rel="noreferrer">Purchase Now</a>
+        <a class="btn-ghost" href="house.html">Enter the House</a>
+      </div>
     </section>
 
-    <div class="footer-note">Gyre &amp; Wabe • Coordinators of Chaos • EST 2026</div>
+    <footer class="site-footer">
+      <div class="footer-links">
+        <a href="index.html">Home</a>
+        <a href="registry/index.html">Registry</a>
+        <a href="house.html">The House</a>
+      </div>
+      <div class="footer-note">Gyre &amp; Wabe • Coordinators of Chaos • EST 2026</div>
+    </footer>
   </main>
 
-  <script src="script.js"></script>
+  <script>
+    function swapImage(button, src) {
+      document.getElementById("mainImage").src = src;
+      const buttons = document.querySelectorAll(".thumbnail-grid button");
+      buttons.forEach(btn => btn.classList.remove("active"));
+      button.classList.add("active");
+    }
+  </script>
 </body>
 </html>
