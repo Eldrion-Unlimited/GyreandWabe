@@ -6,264 +6,192 @@
   <title>Looking-Glass Ember | Gyre &amp; Wabe</title>
   <meta
     name="description"
-    content="Looking-Glass Ember by Gyre & Wabe — collector-grade luxury resin dice from the Looking-Glass realm. Heat trapped beneath polished skin."
+    content="Looking-Glass Ember by Gyre &amp; Wabe. A one-of-one luxury resin dice artifact available for acquisition."
   />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@400;500;600;700;800&display=swap"
-    rel="stylesheet"
-  />
-  <link rel="preload" as="image" href="loo1.jpg" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <div class="site-shell product-shell">
-    <div class="noise"></div>
-    <div class="grid-overlay"></div>
-    <div class="glow glow-a"></div>
-    <div class="glow glow-b"></div>
+  <div class="site-bg-mark" aria-hidden="true">
+    <img src="logo.png" alt="" />
+  </div>
 
-    <header class="site-header">
-      <div class="brand-block">
-        <p class="brand-kicker">Gyre &amp; Wabe</p>
-        <a href="index.html" class="brand-title">The Luxury Dice Authority</a>
+  <nav class="utility-nav">
+    <div class="utility-nav-inner">
+      <a class="brand-lockup" href="index.html">Gyre &amp; Wabe</a>
+      <div class="utility-links">
+        <a href="index.html">Home</a>
+        <a href="registry/index.html">Registry</a>
+        <a href="house.html">The House</a>
+      </div>
+    </div>
+  </nav>
+
+  <main class="wrap">
+    <section class="artifact-hero">
+      <div class="eyebrow">WLGL Realm • One of One</div>
+      <h1>Looking-Glass Ember</h1>
+      <p class="hero-copy">
+        Looking-Glass Ember feels like a reflection that learned how to burn. Smoked depth, ember flare, and mirrored distortion pull against one another until the set reads like an elegant accident seen through warped glass. Entered into the Gyre &amp; Wabe archive as an authenticated original, it is warm, dangerous, and impossibly composed.
+      </p>
+
+      <div class="hero-pills">
+        <div class="pill">GW-WLGL-LOOK-EMBR-01-B01</div>
+        <div class="pill">One of One</div>
+        <div class="pill">Authenticated Original</div>
+        <div class="pill">Available</div>
       </div>
 
-      <nav class="main-nav">
-        <a href="index.html#collections">Collections</a>
-        <a href="index.html#manifesto">Manifesto</a>
-        <a href="index.html#authority">Authority</a>
+      <div class="hero-actions">
         <a
-          href="https://www.etsy.com/shop/GyreAndWabe"
+          class="btn"
+          href="https://square.link/u/11Ju1vSr"
           target="_blank"
           rel="noreferrer"
         >
-          Catalog
+          Purchase Now
         </a>
-      </nav>
-    </header>
+        <a class="btn-ghost" href="#gallery">View Gallery</a>
+        <a class="btn-ghost" href="registry/index.html">Enter the Registry</a>
+      </div>
+    </section>
 
-    <main class="product-main">
-      <section class="product-hero">
-        <div class="product-gallery">
-          <div class="product-hero-image-frame">
-            <img
-              id="mainProductImage"
-              src="loo1.jpg"
-              alt="Looking-Glass Ember luxury resin dice set by Gyre and Wabe"
-              loading="eager"
-              fetchpriority="high"
-              decoding="async"
-            />
+    <section class="artifact-layout">
+      <article class="panel">
+        <h2>Artifact Preview</h2>
+
+        <div class="main-image-shell">
+          <img id="mainImage" src="loo1.jpg" alt="Looking-Glass Ember main image" />
+        </div>
+
+        <div class="thumbnail-grid">
+          <button class="active" onclick="swapImage(this, 'loo1.jpg')" type="button"><img src="loo1.jpg" alt="Looking-Glass Ember thumbnail 1" /></button>
+          <button onclick="swapImage(this, 'loo2.jpg')" type="button"><img src="loo2.jpg" alt="Looking-Glass Ember thumbnail 2" /></button>
+          <button onclick="swapImage(this, 'loo3.jpg')" type="button"><img src="loo3.jpg" alt="Looking-Glass Ember thumbnail 3" /></button>
+          <button onclick="swapImage(this, 'loo4.jpg')" type="button"><img src="loo4.jpg" alt="Looking-Glass Ember thumbnail 4" /></button>
+          <button onclick="swapImage(this, 'loo5.jpg')" type="button"><img src="loo5.jpg" alt="Looking-Glass Ember thumbnail 5" /></button>
+          <button onclick="swapImage(this, 'loo6.jpg')" type="button"><img src="loo6.jpg" alt="Looking-Glass Ember thumbnail 6" /></button>
+          <button onclick="swapImage(this, 'loo7.jpg')" type="button"><img src="loo7.jpg" alt="Looking-Glass Ember thumbnail 7" /></button>
+          <button onclick="swapImage(this, 'loo8.jpg')" type="button"><img src="loo8.jpg" alt="Looking-Glass Ember thumbnail 8" /></button>
+          <button onclick="swapImage(this, 'loo9.jpg')" type="button"><img src="loo9.jpg" alt="Looking-Glass Ember thumbnail 9" /></button>
+          <button onclick="swapImage(this, 'loox.jpg')" type="button"><img src="loox.jpg" alt="Looking-Glass Ember thumbnail 10" /></button>
+          <button onclick="swapImage(this, 'loo11.jpg')" type="button"><img src="loo11.jpg" alt="Looking-Glass Ember thumbnail 11" /></button>
+          <button onclick="swapImage(this, 'loo12.jpg')" type="button"><img src="loo12.jpg" alt="Looking-Glass Ember thumbnail 12" /></button>
+        </div>
+      </article>
+
+      <aside class="panel">
+        <h2>Artifact Details</h2>
+
+        <div class="details-grid">
+          <div class="detail-row">
+            <div class="detail-label">Product Name</div>
+            <div class="detail-value">Looking-Glass Ember</div>
           </div>
 
-          <div class="product-thumbs">
-            <button class="thumb active" data-image="loo1.jpg" type="button">
-              <img src="loo1.jpg" alt="Looking-Glass Ember view 1" loading="lazy" />
-            </button>
-            <button class="thumb" data-image="loo2.jpg" type="button">
-              <img src="loo2.jpg" alt="Looking-Glass Ember view 2" loading="lazy" />
-            </button>
-            <button class="thumb" data-image="loo3.jpg" type="button">
-              <img src="loo3.jpg" alt="Looking-Glass Ember view 3" loading="lazy" />
-            </button>
-            <button class="thumb" data-image="loo4.jpg" type="button">
-              <img src="loo4.jpg" alt="Looking-Glass Ember view 4" loading="lazy" />
-            </button>
-            <button class="thumb" data-image="loo5.jpg" type="button">
-              <img src="loo5.jpg" alt="Looking-Glass Ember view 5" loading="lazy" />
-            </button>
-            <button class="thumb" data-image="loo6.jpg" type="button">
-              <img src="loo6.jpg" alt="Looking-Glass Ember view 6" loading="lazy" />
-            </button>
-            <button class="thumb" data-image="loo7.jpg" type="button">
-              <img src="loo7.jpg" alt="Looking-Glass Ember view 7" loading="lazy" />
-            </button>
-            <button class="thumb" data-image="loo8.jpg" type="button">
-              <img src="loo8.jpg" alt="Looking-Glass Ember view 8" loading="lazy" />
-            </button>
-            <button class="thumb" data-image="loo9.jpg" type="button">
-              <img src="loo9.jpg" alt="Looking-Glass Ember view 9" loading="lazy" />
-            </button>
-            <button class="thumb" data-image="loox.jpg" type="button">
-              <img src="loox.jpg" alt="Looking-Glass Ember feature view" loading="lazy" />
-            </button>
-            <button class="thumb" data-image="loo11.jpg" type="button">
-              <img src="loo11.jpg" alt="Looking-Glass Ember view 11" loading="lazy" />
-            </button>
-            <button class="thumb" data-image="loo12.jpg" type="button">
-              <img src="loo12.jpg" alt="Looking-Glass Ember view 12" loading="lazy" />
-            </button>
+          <div class="detail-row">
+            <div class="detail-label">Realm</div>
+            <div class="detail-value">WLGL</div>
+          </div>
+
+          <div class="detail-row">
+            <div class="detail-label">SKU</div>
+            <div class="detail-value">GW-WLGL-LOOK-EMBR-01-B01</div>
+          </div>
+
+          <div class="detail-row">
+            <div class="detail-label">Edition</div>
+            <div class="detail-value">One of One</div>
+          </div>
+
+          <div class="detail-row">
+            <div class="detail-label">Essence</div>
+            <div class="detail-value">Ember</div>
+          </div>
+
+          <div class="detail-row">
+            <div class="detail-label">Status</div>
+            <div class="detail-value">Available for Acquisition</div>
+          </div>
+
+          <div class="detail-row">
+            <div class="detail-label">Archive Note</div>
+            <div class="detail-value lore">
+              Looking-Glass Ember lives at the crossing of mirror, heat, and tension — luminous without softness, elegant without mercy. Less cozy warmth, more reflection under pressure. A singular work of the house for collectors who prefer glamour with ignition built into it.
+            </div>
           </div>
         </div>
 
-        <div class="product-copy">
-          <p class="section-kicker">Looking-Glass Realm</p>
-          <h1>Looking-Glass Ember</h1>
-          <p class="product-tagline">Heat trapped beneath polished skin.</p>
-
-          <p class="product-lore">
-            Looking-Glass Ember feels like a reflection that learned how to burn.
-            Smoked depth, ember flare, and mirrored distortion pull against one
-            another until the set reads like an elegant accident seen through
-            warped glass. It is warm, dangerous, and impossibly composed.
-          </p>
-
-          <div class="product-actions">
-            <a
-              class="btn btn-solid"
-              href="https://square.link/u/11Ju1vSr"
-              target="_blank"
-              rel="noreferrer"
-            >
-              Acquire Artifact
-            </a>
-            <a
-              class="btn btn-ghost"
-              href="https://www.etsy.com/shop/GyreAndWabe"
-              target="_blank"
-              rel="noreferrer"
-            >
-              Enter the Foundry
-            </a>
-          </div>
-
-          <div class="product-specs">
-            <article class="spec-card">
-              <p class="spec-label">Realm</p>
-              <h3>Looking-Glass</h3>
-            </article>
-
-            <article class="spec-card">
-              <p class="spec-label">Essence</p>
-              <h3>Ember</h3>
-            </article>
-
-            <article class="spec-card">
-              <p class="spec-label">Disposition</p>
-              <h3>Beauty under tension, heat under control.</h3>
-            </article>
-
-            <article class="spec-card">
-              <p class="spec-label">Commerce</p>
-              <h3>Etsy catalog. Square point of sale.</h3>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <section class="detail-band">
-        <article class="detail-card">
-          <p class="section-kicker">Read</p>
-          <h2>Not soft. Not sweet. Fire seen through a mirror.</h2>
-          <p>
-            Looking-Glass Ember should feel luminous and dangerous — less cozy
-            warmth, more reflection under heat. Elegant, molten, and slightly
-            unreal.
-          </p>
-        </article>
-
-        <article class="detail-card">
-          <p class="section-kicker">Presence</p>
-          <h2>Glass, glamour, and the threat of ignition.</h2>
-          <p>
-            Built for players and collectors who want a set that catches the eye
-            like a reflection and keeps it like a warning.
-          </p>
-        </article>
-      </section>
-
-      <section class="detail-grid">
-        <article class="detail-image-card">
-          <img src="loo7.jpg" alt="Looking-Glass Ember detail shot 7" loading="lazy" />
-        </article>
-        <article class="detail-image-card">
-          <img src="loo8.jpg" alt="Looking-Glass Ember detail shot 8" loading="lazy" />
-        </article>
-        <article class="detail-image-card">
-          <img src="loo9.jpg" alt="Looking-Glass Ember detail shot 9" loading="lazy" />
-        </article>
-        <article class="detail-image-card">
-          <img src="loo11.jpg" alt="Looking-Glass Ember detail shot 11" loading="lazy" />
-        </article>
-        <article class="detail-image-card">
-          <img src="loo12.jpg" alt="Looking-Glass Ember detail shot 12" loading="lazy" />
-        </article>
-        <article class="detail-image-card">
-          <img src="loo6.jpg" alt="Looking-Glass Ember detail shot 6" loading="lazy" />
-        </article>
-        <article class="detail-image-card">
-          <img src="loo5.jpg" alt="Looking-Glass Ember detail shot 5" loading="lazy" />
-        </article>
-        <article class="detail-image-card">
-          <img src="loo4.jpg" alt="Looking-Glass Ember detail shot 4" loading="lazy" />
-        </article>
-        <article class="detail-image-card detail-image-wide">
-          <img src="loox.jpg" alt="Looking-Glass Ember feature shot" loading="lazy" />
-        </article>
-      </section>
-
-      <section class="closing-section product-closing">
-        <div class="closing-copy">
-          <p class="section-kicker">Closing Signal</p>
-          <h2>
-            Reflected fire.<br />
-            Controlled ruin.
-          </h2>
-          <p>
-            Looking-Glass Ember is for the collector who wants heat without
-            chaos, glamour without softness, and a set that looks like it came
-            back from the mirror changed.
-          </p>
-        </div>
-
-        <div class="closing-actions">
+        <div class="hero-actions">
           <a
-            class="btn btn-solid"
+            class="btn"
             href="https://square.link/u/11Ju1vSr"
             target="_blank"
             rel="noreferrer"
           >
-            Acquire Looking-Glass Ember
-          </a>
-          <a class="btn btn-ghost" href="index.html#collections">
-            Return to Collections
+            Purchase Now
           </a>
         </div>
-      </section>
-    </main>
+      </aside>
+    </section>
 
-    <footer class="site-footer">
-      <div>
-        <p class="brand-kicker">Gyre &amp; Wabe</p>
-        <p class="footer-copy">
-          Luxury resin dice. Collector objects. Coordinated chaos.
+    <section class="gallery-section panel" id="gallery">
+      <h2>Full Gallery</h2>
+      <div class="gallery-grid">
+        <img src="loo1.jpg" alt="Looking-Glass Ember gallery image 1" />
+        <img src="loo2.jpg" alt="Looking-Glass Ember gallery image 2" />
+        <img src="loo3.jpg" alt="Looking-Glass Ember gallery image 3" />
+        <img src="loo4.jpg" alt="Looking-Glass Ember gallery image 4" />
+        <img src="loo5.jpg" alt="Looking-Glass Ember gallery image 5" />
+        <img src="loo6.jpg" alt="Looking-Glass Ember gallery image 6" />
+        <img src="loo7.jpg" alt="Looking-Glass Ember gallery image 7" />
+        <img src="loo8.jpg" alt="Looking-Glass Ember gallery image 8" />
+        <img src="loo9.jpg" alt="Looking-Glass Ember gallery image 9" />
+        <img src="loox.jpg" alt="Looking-Glass Ember gallery image 10" />
+        <img src="loo11.jpg" alt="Looking-Glass Ember gallery image 11" />
+        <img src="loo12.jpg" alt="Looking-Glass Ember gallery image 12" />
+      </div>
+    </section>
+
+    <section class="registry-banner">
+      <div class="registry-banner-copy">
+        <div class="eyebrow">House Read</div>
+        <h2>Not soft. Not sweet. Fire seen through a mirror.</h2>
+        <p>
+          Looking-Glass Ember is for the collector who wants heat without chaos, glamour without softness, and a set that looks like it came back from the mirror changed.
         </p>
       </div>
 
-      <div class="footer-links">
+      <div class="registry-banner-actions">
         <a
-          href="https://www.instagram.com/gyreandwabe"
+          class="btn"
+          href="https://square.link/u/11Ju1vSr"
           target="_blank"
           rel="noreferrer"
         >
-          Instagram
+          Purchase Now
         </a>
-        <a
-          href="https://www.etsy.com/shop/GyreAndWabe"
-          target="_blank"
-          rel="noreferrer"
-        >
-          Catalog
-        </a>
-        <a href="index.html#collections">
-          Collections
-        </a>
+        <a class="btn-ghost" href="house.html">Enter the House</a>
       </div>
-    </footer>
-  </div>
+    </section>
 
-  <script src="script.js"></script>
+    <footer class="site-footer">
+      <div class="footer-links">
+        <a href="index.html">Home</a>
+        <a href="registry/index.html">Registry</a>
+        <a href="house.html">The House</a>
+      </div>
+      <div class="footer-note">Gyre &amp; Wabe • Coordinators of Chaos • EST 2026</div>
+    </footer>
+  </main>
+
+  <script>
+    function swapImage(button, src) {
+      document.getElementById("mainImage").src = src;
+
+      const buttons = document.querySelectorAll(".thumbnail-grid button");
+      buttons.forEach(btn => btn.classList.remove("active"));
+      button.classList.add("active");
+    }
+  </script>
 </body>
 </html>
