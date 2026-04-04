@@ -121,19 +121,19 @@ body > *:not(.site-bg-mark) {
 .wrap {
   width: min(var(--max), calc(100% - 28px));
   margin: 0 auto;
-  padding: 26px 0 80px;
+  padding: 18px 0 80px;
 }
 
 .hero,
 .artifact-hero {
-  margin-top: 18px;
+  margin-top: 14px;
   border: 1px solid var(--line);
   border-radius: var(--radius-lg);
   box-shadow: var(--shadow);
   background:
     linear-gradient(180deg, rgba(212, 175, 55, 0.08), rgba(255, 255, 255, 0.01)),
     linear-gradient(135deg, rgba(255, 255, 255, 0.02), rgba(255, 255, 255, 0));
-  padding: 32px;
+  padding: 28px;
 }
 
 .hero-grid {
@@ -153,7 +153,7 @@ body > *:not(.site-bg-mark) {
 
 .hero h1,
 .artifact-hero h1 {
-  font-size: clamp(2.6rem, 6vw, 5rem);
+  font-size: clamp(2.4rem, 5.2vw, 4.8rem);
   line-height: 0.95;
   margin-bottom: 14px;
 }
@@ -163,7 +163,7 @@ body > *:not(.site-bg-mark) {
   max-width: 820px;
   color: var(--muted);
   font-size: 1rem;
-  line-height: 1.95;
+  line-height: 1.9;
 }
 
 .hero-pills {
@@ -184,7 +184,8 @@ body > *:not(.site-bg-mark) {
   letter-spacing: 0.1em;
 }
 
-.hero-actions {
+.hero-actions,
+.foundry-actions {
   display: flex;
   flex-wrap: wrap;
   gap: 12px;
@@ -222,7 +223,9 @@ body > *:not(.site-bg-mark) {
 .registry-banner,
 .manifesto-panel,
 .manifesto-side-panel,
-.lore-banner {
+.lore-banner,
+.foundry-panel,
+.foundry-side-panel {
   border: 1px solid var(--line);
   border-radius: var(--radius-md);
   background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
@@ -237,7 +240,9 @@ body > *:not(.site-bg-mark) {
 .panel,
 .manifesto-panel,
 .manifesto-side-panel,
-.lore-banner {
+.lore-banner,
+.foundry-panel,
+.foundry-side-panel {
   padding: 24px;
 }
 
@@ -266,7 +271,9 @@ body > *:not(.site-bg-mark) {
 .lore,
 .detail-value,
 .manifesto-panel p,
-.lore-banner p {
+.lore-banner p,
+.foundry-panel p,
+.foundry-side-panel p {
   color: var(--muted);
   line-height: 1.9;
 }
@@ -274,18 +281,21 @@ body > *:not(.site-bg-mark) {
 .manifesto-section,
 .lore-banner-section,
 .featured-section,
-.gallery-section {
+.gallery-section,
+.foundry-section {
   margin-top: 24px;
 }
 
-.manifesto-grid {
+.manifesto-grid,
+.foundry-grid {
   display: grid;
   grid-template-columns: 1.15fr 0.85fr;
   gap: 20px;
 }
 
 .manifesto-panel h2,
-.lore-banner h2 {
+.lore-banner h2,
+.foundry-panel h2 {
   font-size: clamp(1.5rem, 3vw, 2.4rem);
   line-height: 1.08;
   margin-bottom: 16px;
@@ -296,13 +306,15 @@ body > *:not(.site-bg-mark) {
   margin-top: 14px;
 }
 
-.doctrine-list {
+.doctrine-list,
+.foundry-list {
   list-style: none;
   display: grid;
   gap: 12px;
 }
 
-.doctrine-list li {
+.doctrine-list li,
+.foundry-list li {
   color: var(--text);
   padding: 14px 16px;
   border: 1px solid rgba(212,175,55,0.14);
@@ -311,6 +323,17 @@ body > *:not(.site-bg-mark) {
   text-transform: uppercase;
   letter-spacing: 0.12em;
   font-size: 0.82rem;
+}
+
+.foundry-lead {
+  margin-bottom: 12px;
+}
+
+.foundry-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 22px;
 }
 
 .section-head {
@@ -406,6 +429,12 @@ body > *:not(.site-bg-mark) {
   letter-spacing: 0.06em;
   text-transform: none;
   color: var(--text);
+}
+
+.registry-banner-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
 }
 
 .artifact-layout {
@@ -532,7 +561,8 @@ body > *:not(.site-bg-mark) {
 
   .hero-grid,
   .artifact-layout,
-  .manifesto-grid {
+  .manifesto-grid,
+  .foundry-grid {
     grid-template-columns: 1fr;
   }
 }
@@ -566,7 +596,9 @@ body > *:not(.site-bg-mark) {
   .registry-banner,
   .manifesto-panel,
   .manifesto-side-panel,
-  .lore-banner {
+  .lore-banner,
+  .foundry-panel,
+  .foundry-side-panel {
     padding: 20px;
   }
 
@@ -578,7 +610,12 @@ body > *:not(.site-bg-mark) {
 
   .hero h1,
   .artifact-hero h1 {
-    font-size: 2.3rem;
+    font-size: 2.15rem;
+  }
+
+  .hero-copy,
+  .hero-copy-block p {
+    line-height: 1.75;
   }
 
   .registry-banner {
