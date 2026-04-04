@@ -6,246 +6,188 @@
   <title>Interstellar | Gyre &amp; Wabe</title>
   <meta
     name="description"
-    content="Interstellar by Gyre & Wabe — collector-grade luxury resin dice from the Obscure realm. Cosmic bloom under disciplined pressure."
+    content="Interstellar by Gyre &amp; Wabe. A one-of-one luxury resin dice artifact available for acquisition."
   />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@400;500;600;700;800&display=swap"
-    rel="stylesheet"
-  />
-  <link rel="preload" as="image" href="ints8.jpg" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <div class="site-shell product-shell">
-    <div class="noise"></div>
-    <div class="grid-overlay"></div>
-    <div class="glow glow-a"></div>
-    <div class="glow glow-b"></div>
+  <div class="site-bg-mark" aria-hidden="true">
+    <img src="logo.png" alt="" />
+  </div>
 
-    <header class="site-header">
-      <div class="brand-block">
-        <p class="brand-kicker">Gyre &amp; Wabe</p>
-        <a href="index.html" class="brand-title">The Luxury Dice Authority</a>
+  <nav class="utility-nav">
+    <div class="utility-nav-inner">
+      <a class="brand-lockup" href="index.html">Gyre &amp; Wabe</a>
+      <div class="utility-links">
+        <a href="index.html">Home</a>
+        <a href="registry/index.html">Registry</a>
+        <a href="house.html">The House</a>
+      </div>
+    </div>
+  </nav>
+
+  <main class="wrap">
+    <section class="artifact-hero">
+      <div class="eyebrow">OBSC Realm • One of One</div>
+      <h1>Interstellar</h1>
+      <p class="hero-copy">
+        Interstellar captures astral noise and forces it into composure. Suspended depth, luminous interference, and celestial bloom collide under pressure until chaos resolves into a collector object. Entered into the Gyre &amp; Wabe archive as an authenticated original, it is equal parts specimen, signal, and private rite.
+      </p>
+
+      <div class="hero-pills">
+        <div class="pill">GW-OBSC-STCH-MG-01-B01</div>
+        <div class="pill">One of One</div>
+        <div class="pill">Authenticated Original</div>
+        <div class="pill">Available</div>
       </div>
 
-      <nav class="main-nav">
-        <a href="index.html#collections">Collections</a>
-        <a href="index.html#manifesto">Manifesto</a>
-        <a href="index.html#authority">Authority</a>
+      <div class="hero-actions">
         <a
-          href="https://www.etsy.com/shop/GyreAndWabe"
+          class="btn"
+          href="https://square.link/u/NdzpNeGd"
           target="_blank"
           rel="noreferrer"
         >
-          Catalog
+          Purchase Now
         </a>
-      </nav>
-    </header>
+        <a class="btn-ghost" href="#gallery">View Gallery</a>
+        <a class="btn-ghost" href="registry/index.html">Enter the Registry</a>
+      </div>
+    </section>
 
-    <main class="product-main">
-      <section class="product-hero">
-        <div class="product-gallery">
-          <div class="product-hero-image-frame">
-            <img
-              id="mainProductImage"
-              src="ints8.jpg"
-              alt="Interstellar luxury resin dice set by Gyre and Wabe"
-              loading="eager"
-              fetchpriority="high"
-              decoding="async"
-            />
+    <section class="artifact-layout">
+      <article class="panel">
+        <h2>Artifact Preview</h2>
+
+        <div class="main-image-shell">
+          <img id="mainImage" src="ints8.jpg" alt="Interstellar main image" />
+        </div>
+
+        <div class="thumbnail-grid">
+          <button onclick="swapImage(this, 'ints1.jpg')" type="button"><img src="ints1.jpg" alt="Interstellar thumbnail 1" /></button>
+          <button onclick="swapImage(this, 'ints2.jpg')" type="button"><img src="ints2.jpg" alt="Interstellar thumbnail 2" /></button>
+          <button onclick="swapImage(this, 'ints3.jpg')" type="button"><img src="ints3.jpg" alt="Interstellar thumbnail 3" /></button>
+          <button onclick="swapImage(this, 'ints4.jpg')" type="button"><img src="ints4.jpg" alt="Interstellar thumbnail 4" /></button>
+          <button onclick="swapImage(this, 'ints5.jpg')" type="button"><img src="ints5.jpg" alt="Interstellar thumbnail 5" /></button>
+          <button onclick="swapImage(this, 'ints6.jpg')" type="button"><img src="ints6.jpg" alt="Interstellar thumbnail 6" /></button>
+          <button onclick="swapImage(this, 'ints7.jpg')" type="button"><img src="ints7.jpg" alt="Interstellar thumbnail 7" /></button>
+          <button class="active" onclick="swapImage(this, 'ints8.jpg')" type="button"><img src="ints8.jpg" alt="Interstellar thumbnail 8" /></button>
+          <button onclick="swapImage(this, 'ints9.jpg')" type="button"><img src="ints9.jpg" alt="Interstellar thumbnail 9" /></button>
+          <button onclick="swapImage(this, 'instx.jpg')" type="button"><img src="instx.jpg" alt="Interstellar thumbnail 10" /></button>
+        </div>
+      </article>
+
+      <aside class="panel">
+        <h2>Artifact Details</h2>
+
+        <div class="details-grid">
+          <div class="detail-row">
+            <div class="detail-label">Product Name</div>
+            <div class="detail-value">Interstellar</div>
           </div>
 
-          <div class="product-thumbs">
-            <button class="thumb" data-image="ints1.jpg" type="button">
-              <img src="ints1.jpg" alt="Interstellar view 1" loading="lazy" />
-            </button>
-            <button class="thumb" data-image="ints2.jpg" type="button">
-              <img src="ints2.jpg" alt="Interstellar view 2" loading="lazy" />
-            </button>
-            <button class="thumb" data-image="ints3.jpg" type="button">
-              <img src="ints3.jpg" alt="Interstellar view 3" loading="lazy" />
-            </button>
-            <button class="thumb" data-image="ints4.jpg" type="button">
-              <img src="ints4.jpg" alt="Interstellar view 4" loading="lazy" />
-            </button>
-            <button class="thumb" data-image="ints5.jpg" type="button">
-              <img src="ints5.jpg" alt="Interstellar view 5" loading="lazy" />
-            </button>
-            <button class="thumb" data-image="ints6.jpg" type="button">
-              <img src="ints6.jpg" alt="Interstellar view 6" loading="lazy" />
-            </button>
-            <button class="thumb" data-image="ints7.jpg" type="button">
-              <img src="ints7.jpg" alt="Interstellar view 7" loading="lazy" />
-            </button>
-            <button class="thumb active" data-image="ints8.jpg" type="button">
-              <img src="ints8.jpg" alt="Interstellar view 8" loading="lazy" />
-            </button>
-            <button class="thumb" data-image="ints9.jpg" type="button">
-              <img src="ints9.jpg" alt="Interstellar view 9" loading="lazy" />
-            </button>
-            <button class="thumb" data-image="instx.jpg" type="button">
-              <img src="instx.jpg" alt="Interstellar feature view" loading="lazy" />
-            </button>
+          <div class="detail-row">
+            <div class="detail-label">Realm</div>
+            <div class="detail-value">OBSC</div>
+          </div>
+
+          <div class="detail-row">
+            <div class="detail-label">SKU</div>
+            <div class="detail-value">GW-OBSC-STCH-MG-01-B01</div>
+          </div>
+
+          <div class="detail-row">
+            <div class="detail-label">Edition</div>
+            <div class="detail-value">One of One</div>
+          </div>
+
+          <div class="detail-row">
+            <div class="detail-label">Essence</div>
+            <div class="detail-value">Mica Ghost / Magenta</div>
+          </div>
+
+          <div class="detail-row">
+            <div class="detail-label">Status</div>
+            <div class="detail-value">Available for Acquisition</div>
+          </div>
+
+          <div class="detail-row">
+            <div class="detail-label">Archive Note</div>
+            <div class="detail-value lore">
+              Interstellar belongs to the colder edge of spectacle — celestial, composed, and sharpened by luminous disturbance. Less fantasy sparkle, more cosmic signal trapped in resin. A singular work of the house for collectors who want depth, tension, and gravitational pull.
+            </div>
           </div>
         </div>
 
-        <div class="product-copy">
-          <p class="section-kicker">Obscure Realm</p>
-          <h1>Interstellar</h1>
-          <p class="product-tagline">Cosmic bloom under disciplined pressure.</p>
-
-          <p class="product-lore">
-            Interstellar captures astral noise and forces it into composure.
-            Suspended depth, luminous interference, and celestial bloom collide
-            under pressure until chaos resolves into a collector object. It is
-            equal parts specimen, signal, and private rite.
-          </p>
-
-          <div class="product-actions">
-            <a
-              class="btn btn-solid"
-              href="https://square.link/u/NdzpNeGd"
-              target="_blank"
-              rel="noreferrer"
-            >
-              Acquire Artifact
-            </a>
-            <a
-              class="btn btn-ghost"
-              href="https://www.etsy.com/shop/GyreAndWabe"
-              target="_blank"
-              rel="noreferrer"
-            >
-              Enter the Foundry
-            </a>
-          </div>
-
-          <div class="product-specs">
-            <article class="spec-card">
-              <p class="spec-label">Realm</p>
-              <h3>Obscure</h3>
-            </article>
-
-            <article class="spec-card">
-              <p class="spec-label">Essence</p>
-              <h3>Mica Ghost / Magenta</h3>
-            </article>
-
-            <article class="spec-card">
-              <p class="spec-label">Disposition</p>
-              <h3>Astral noise refined into ritual.</h3>
-            </article>
-
-            <article class="spec-card">
-              <p class="spec-label">Commerce</p>
-              <h3>Etsy catalog. Square point of sale.</h3>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <section class="detail-band">
-        <article class="detail-card">
-          <p class="section-kicker">Read</p>
-          <h2>Not bright. Not playful. Celestial with teeth.</h2>
-          <p>
-            Interstellar should read as composed, luminous, and dangerous — less
-            fantasy sparkle, more cosmic signal trapped in resin. It belongs on
-            a table, but it behaves like a relic.
-          </p>
-        </article>
-
-        <article class="detail-card">
-          <p class="section-kicker">Presence</p>
-          <h2>Luxury with gravitational pull.</h2>
-          <p>
-            Built for players and collectors who want their dice to feel like
-            the centerpiece of the ritual, not an accessory to it.
-          </p>
-        </article>
-      </section>
-
-      <section class="detail-grid">
-        <article class="detail-image-card">
-          <img src="ints6.jpg" alt="Interstellar detail shot 1" loading="lazy" />
-        </article>
-        <article class="detail-image-card">
-          <img src="ints7.jpg" alt="Interstellar detail shot 2" loading="lazy" />
-        </article>
-        <article class="detail-image-card">
-          <img src="ints8.jpg" alt="Interstellar detail shot 3" loading="lazy" />
-        </article>
-        <article class="detail-image-card">
-          <img src="ints9.jpg" alt="Interstellar detail shot 4" loading="lazy" />
-        </article>
-        <article class="detail-image-card detail-image-wide">
-          <img src="instx.jpg" alt="Interstellar feature shot" loading="lazy" />
-        </article>
-      </section>
-
-      <section class="closing-section product-closing">
-        <div class="closing-copy">
-          <p class="section-kicker">Closing Signal</p>
-          <h2>
-            A private constellation.<br />
-            A controlled collapse.
-          </h2>
-          <p>
-            Interstellar is for the collector who wants cosmic energy without
-            softness — depth without clutter, glow without innocence, spectacle
-            without compromise.
-          </p>
-        </div>
-
-        <div class="closing-actions">
+        <div class="hero-actions">
           <a
-            class="btn btn-solid"
+            class="btn"
             href="https://square.link/u/NdzpNeGd"
             target="_blank"
             rel="noreferrer"
           >
-            Acquire Interstellar
-          </a>
-          <a class="btn btn-ghost" href="index.html#collections">
-            Return to Collections
+            Purchase Now
           </a>
         </div>
-      </section>
-    </main>
+      </aside>
+    </section>
 
-    <footer class="site-footer">
-      <div>
-        <p class="brand-kicker">Gyre &amp; Wabe</p>
-        <p class="footer-copy">
-          Luxury resin dice. Collector objects. Coordinated chaos.
+    <section class="gallery-section panel" id="gallery">
+      <h2>Full Gallery</h2>
+      <div class="gallery-grid">
+        <img src="ints1.jpg" alt="Interstellar gallery image 1" />
+        <img src="ints2.jpg" alt="Interstellar gallery image 2" />
+        <img src="ints3.jpg" alt="Interstellar gallery image 3" />
+        <img src="ints4.jpg" alt="Interstellar gallery image 4" />
+        <img src="ints5.jpg" alt="Interstellar gallery image 5" />
+        <img src="ints6.jpg" alt="Interstellar gallery image 6" />
+        <img src="ints7.jpg" alt="Interstellar gallery image 7" />
+        <img src="ints8.jpg" alt="Interstellar gallery image 8" />
+        <img src="ints9.jpg" alt="Interstellar gallery image 9" />
+        <img src="instx.jpg" alt="Interstellar gallery image 10" />
+      </div>
+    </section>
+
+    <section class="registry-banner">
+      <div class="registry-banner-copy">
+        <div class="eyebrow">House Read</div>
+        <h2>Not bright. Not playful. Celestial with teeth.</h2>
+        <p>
+          Interstellar is for the collector who wants cosmic energy without softness — depth without clutter, glow without innocence, and spectacle without compromise.
         </p>
       </div>
 
-      <div class="footer-links">
+      <div class="registry-banner-actions">
         <a
-          href="https://www.instagram.com/gyreandwabe"
+          class="btn"
+          href="https://square.link/u/NdzpNeGd"
           target="_blank"
           rel="noreferrer"
         >
-          Instagram
+          Purchase Now
         </a>
-        <a
-          href="https://www.etsy.com/shop/GyreAndWabe"
-          target="_blank"
-          rel="noreferrer"
-        >
-          Catalog
-        </a>
-        <a href="index.html#collections">
-          Collections
-        </a>
+        <a class="btn-ghost" href="house.html">Enter the House</a>
       </div>
-    </footer>
-  </div>
+    </section>
 
-  <script src="script.js"></script>
+    <footer class="site-footer">
+      <div class="footer-links">
+        <a href="index.html">Home</a>
+        <a href="registry/index.html">Registry</a>
+        <a href="house.html">The House</a>
+      </div>
+      <div class="footer-note">Gyre &amp; Wabe • Coordinators of Chaos • EST 2026</div>
+    </footer>
+  </main>
+
+  <script>
+    function swapImage(button, src) {
+      document.getElementById("mainImage").src = src;
+
+      const buttons = document.querySelectorAll(".thumbnail-grid button");
+      buttons.forEach(btn => btn.classList.remove("active"));
+      button.classList.add("active");
+    }
+  </script>
 </body>
 </html>
