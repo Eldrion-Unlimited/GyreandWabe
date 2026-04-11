@@ -21,7 +21,7 @@
       <div class="utility-links">
         <a href="index.html">Home</a>
         <a href="registry/index.html">Registry</a>
-        <a href="house.html">The House</a>
+        <a href="thefoundry.html">The Foundry</a>
       </div>
     </div>
   </nav>
@@ -57,14 +57,14 @@
         </div>
 
         <div class="thumbnail-grid">
-          <button class="active" onclick="swapImage(this, 'red1.jpg')" type="button"><img src="red1.jpg" alt="Red Queen's Ruin thumbnail 1" /></button>
-          <button onclick="swapImage(this, 'red2.jpg')" type="button"><img src="red2.jpg" alt="Red Queen's Ruin thumbnail 2" /></button>
-          <button onclick="swapImage(this, 'red3.jpg')" type="button"><img src="red3.jpg" alt="Red Queen's Ruin thumbnail 3" /></button>
-          <button onclick="swapImage(this, 'red4.jpg')" type="button"><img src="red4.jpg" alt="Red Queen's Ruin thumbnail 4" /></button>
-          <button onclick="swapImage(this, 'red5.jpg')" type="button"><img src="red5.jpg" alt="Red Queen's Ruin thumbnail 5" /></button>
-          <button onclick="swapImage(this, 'red6.jpg')" type="button"><img src="red6.jpg" alt="Red Queen's Ruin thumbnail 6" /></button>
-          <button onclick="swapImage(this, 'red7.jpg')" type="button"><img src="red7.jpg" alt="Red Queen's Ruin thumbnail 7" /></button>
-          <button onclick="swapImage(this, 'red8.jpg')" type="button"><img src="red8.jpg" alt="Red Queen's Ruin thumbnail 8" /></button>
+          <button class="active" onclick="swapImage(this, 'red1.jpg')" type="button" aria-pressed="true"><img src="red1.jpg" alt="Red Queen's Ruin thumbnail 1" /></button>
+          <button onclick="swapImage(this, 'red2.jpg')" type="button" aria-pressed="false"><img src="red2.jpg" alt="Red Queen's Ruin thumbnail 2" /></button>
+          <button onclick="swapImage(this, 'red3.jpg')" type="button" aria-pressed="false"><img src="red3.jpg" alt="Red Queen's Ruin thumbnail 3" /></button>
+          <button onclick="swapImage(this, 'red4.jpg')" type="button" aria-pressed="false"><img src="red4.jpg" alt="Red Queen's Ruin thumbnail 4" /></button>
+          <button onclick="swapImage(this, 'red5.jpg')" type="button" aria-pressed="false"><img src="red5.jpg" alt="Red Queen's Ruin thumbnail 5" /></button>
+          <button onclick="swapImage(this, 'red6.jpg')" type="button" aria-pressed="false"><img src="red6.jpg" alt="Red Queen's Ruin thumbnail 6" /></button>
+          <button onclick="swapImage(this, 'red7.jpg')" type="button" aria-pressed="false"><img src="red7.jpg" alt="Red Queen's Ruin thumbnail 7" /></button>
+          <button onclick="swapImage(this, 'red8.jpg')" type="button" aria-pressed="false"><img src="red8.jpg" alt="Red Queen's Ruin thumbnail 8" /></button>
         </div>
       </article>
 
@@ -114,14 +114,14 @@
     <section class="gallery-section panel" id="gallery">
       <h2>Full Gallery</h2>
       <div class="gallery-grid">
-        <img src="red1.jpg" alt="Red Queen's Ruin gallery image 1" />
-        <img src="red2.jpg" alt="Red Queen's Ruin gallery image 2" />
-        <img src="red3.jpg" alt="Red Queen's Ruin gallery image 3" />
-        <img src="red4.jpg" alt="Red Queen's Ruin gallery image 4" />
-        <img src="red5.jpg" alt="Red Queen's Ruin gallery image 5" />
-        <img src="red6.jpg" alt="Red Queen's Ruin gallery image 6" />
-        <img src="red7.jpg" alt="Red Queen's Ruin gallery image 7" />
-        <img src="red8.jpg" alt="Red Queen's Ruin gallery image 8" />
+        <img src="red1.jpg" alt="Red Queen's Ruin gallery image 1" loading="lazy" />
+        <img src="red2.jpg" alt="Red Queen's Ruin gallery image 2" loading="lazy" />
+        <img src="red3.jpg" alt="Red Queen's Ruin gallery image 3" loading="lazy" />
+        <img src="red4.jpg" alt="Red Queen's Ruin gallery image 4" loading="lazy" />
+        <img src="red5.jpg" alt="Red Queen's Ruin gallery image 5" loading="lazy" />
+        <img src="red6.jpg" alt="Red Queen's Ruin gallery image 6" loading="lazy" />
+        <img src="red7.jpg" alt="Red Queen's Ruin gallery image 7" loading="lazy" />
+        <img src="red8.jpg" alt="Red Queen's Ruin gallery image 8" loading="lazy" />
       </div>
     </section>
 
@@ -136,7 +136,7 @@
 
       <div class="registry-banner-actions">
         <a class="btn" href="https://square.link/u/kUr82f3G" target="_blank" rel="noreferrer">Purchase Now</a>
-        <a class="btn-ghost" href="house.html">Enter the House</a>
+        <a class="btn-ghost" href="thefoundry.html">Enter the Foundry</a>
       </div>
     </section>
 
@@ -144,19 +144,12 @@
       <div class="footer-links">
         <a href="index.html">Home</a>
         <a href="registry/index.html">Registry</a>
-        <a href="house.html">The House</a>
+        <a href="thefoundry.html">The Foundry</a>
       </div>
       <div class="footer-note">Gyre &amp; Wabe • Coordinators of Chaos • EST 2026</div>
     </footer>
   </main>
 
-  <script>
-    function swapImage(button, src) {
-      document.getElementById("mainImage").src = src;
-      const buttons = document.querySelectorAll(".thumbnail-grid button");
-      buttons.forEach(btn => btn.classList.remove("active"));
-      button.classList.add("active");
-    }
-  </script>
+  <script src="script.js"></script>
 </body>
 </html>
