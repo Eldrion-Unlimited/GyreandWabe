@@ -11,7 +11,7 @@
       --gold: #d4af37;
       --text: #f4efe2;
       --muted: #b7ab84;
-      --shadow: 0 18px 48px rgba(0,0,0,0.45);
+      --shadow: 0 18px 48px rgba(0, 0, 0, 0.45);
     }
 
     * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -34,6 +34,7 @@
       top: 0;
       z-index: 999;
       backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
       background: rgba(7,7,7,0.82);
       border-bottom: 1px solid rgba(212,175,55,0.18);
     }
@@ -70,6 +71,14 @@
       font-size: 0.76rem;
       text-transform: uppercase;
       letter-spacing: 0.12em;
+      transition: transform 0.18s ease, border-color 0.18s ease, background 0.18s ease;
+    }
+
+    .utility-links a:hover,
+    .utility-links a[aria-current="page"] {
+      transform: translateY(-1px);
+      border-color: rgba(212,175,55,0.42);
+      background: rgba(212,175,55,0.12);
     }
 
     .wrap {
@@ -209,6 +218,13 @@
       font-size: 0.78rem;
       text-transform: uppercase;
       letter-spacing: 0.12em;
+      transition: transform 0.18s ease, border-color 0.18s ease, background 0.18s ease;
+    }
+
+    .return-strip a:hover {
+      transform: translateY(-1px);
+      border-color: rgba(212,175,55,0.42);
+      background: rgba(212,175,55,0.12);
     }
 
     .footer {
@@ -243,7 +259,7 @@
     <div class="utility-nav-inner">
       <a class="brand-lockup" href="../index.html">Gyre &amp; Wabe</a>
       <div class="utility-links">
-        <a href="index.html">Registry</a>
+        <a href="index.html" aria-current="page">Registry</a>
         <a href="../index.html">Home</a>
       </div>
     </div>
@@ -262,9 +278,9 @@
 
       <div class="pill-row">
         <div class="pill">GWR-2026-0006</div>
-        <div class="pill">GW-QUEE-RQRN-MP+FF+MG-01-B01</div>
+        <div class="pill">GW-QUEE-RQRN-RDGL-01-B01</div>
         <div class="pill">ONE OF ONE</div>
-        <div class="pill">AQUIRED</div>
+        <div class="pill">FORGED</div>
       </div>
     </section>
 
@@ -273,15 +289,15 @@
         <h2>Registry Record</h2>
         <div class="registry-table">
           <div class="label">Registry ID</div><div class="value">GWR-2026-0006</div>
-          <div class="label">SKU</div><div class="value">GW-QUEE-RQRN-MP+FF+MG-01-B01</div>
+          <div class="label">SKU</div><div class="value">GW-QUEE-RQRN-RDGL-01-B01</div>
           <div class="label">Product Name</div><div class="value">Red Queen's Ruin</div>
           <div class="label">Edition</div><div class="value">ONE OF ONE</div>
-          <div class="label">Creation Date</div><div class="value">March 11th, 2026</div>
-          <div class="label">Status</div><div class="value">AQUIRED</div>
+          <div class="label">Creation Date</div><div class="value">March 11, 2026</div>
+          <div class="label">Status</div><div class="value">FORGED</div>
           <div class="label">Registry URL</div><div class="value">.../GWR-2026-0006.html</div>
           <div class="label">Owner / Recipient</div><div class="value">—</div>
           <div class="label">Certificate Line</div><div class="value">An original Gyre &amp; Wabe artifact, entered into the registry as authentic.</div>
-          <div class="label">Materials / Effects</div><div class="value">To be entered by maker.</div>
+          <div class="label">Materials / Effects</div><div class="value">Crimson unrest, gilded menace, and regal fracture preserved in resin.</div>
           <div class="label">Notes</div><div class="value">QUEE realm original of regal fracture and ruin.</div>
         </div>
       </article>
