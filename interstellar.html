@@ -21,7 +21,7 @@
       <div class="utility-links">
         <a href="index.html">Home</a>
         <a href="registry/index.html">Registry</a>
-        <a href="house.html">The House</a>
+        <a href="thefoundry.html">The Foundry</a>
       </div>
     </div>
   </nav>
@@ -64,16 +64,16 @@
         </div>
 
         <div class="thumbnail-grid">
-          <button onclick="swapImage(this, 'ints1.jpg')" type="button"><img src="ints1.jpg" alt="Interstellar thumbnail 1" /></button>
-          <button onclick="swapImage(this, 'ints2.jpg')" type="button"><img src="ints2.jpg" alt="Interstellar thumbnail 2" /></button>
-          <button onclick="swapImage(this, 'ints3.jpg')" type="button"><img src="ints3.jpg" alt="Interstellar thumbnail 3" /></button>
-          <button onclick="swapImage(this, 'ints4.jpg')" type="button"><img src="ints4.jpg" alt="Interstellar thumbnail 4" /></button>
-          <button onclick="swapImage(this, 'ints5.jpg')" type="button"><img src="ints5.jpg" alt="Interstellar thumbnail 5" /></button>
-          <button onclick="swapImage(this, 'ints6.jpg')" type="button"><img src="ints6.jpg" alt="Interstellar thumbnail 6" /></button>
-          <button onclick="swapImage(this, 'ints7.jpg')" type="button"><img src="ints7.jpg" alt="Interstellar thumbnail 7" /></button>
-          <button class="active" onclick="swapImage(this, 'ints8.jpg')" type="button"><img src="ints8.jpg" alt="Interstellar thumbnail 8" /></button>
-          <button onclick="swapImage(this, 'ints9.jpg')" type="button"><img src="ints9.jpg" alt="Interstellar thumbnail 9" /></button>
-          <button onclick="swapImage(this, 'instx.jpg')" type="button"><img src="instx.jpg" alt="Interstellar thumbnail 10" /></button>
+          <button onclick="swapImage(this, 'ints1.jpg')" type="button" aria-pressed="false"><img src="ints1.jpg" alt="Interstellar thumbnail 1" /></button>
+          <button onclick="swapImage(this, 'ints2.jpg')" type="button" aria-pressed="false"><img src="ints2.jpg" alt="Interstellar thumbnail 2" /></button>
+          <button onclick="swapImage(this, 'ints3.jpg')" type="button" aria-pressed="false"><img src="ints3.jpg" alt="Interstellar thumbnail 3" /></button>
+          <button onclick="swapImage(this, 'ints4.jpg')" type="button" aria-pressed="false"><img src="ints4.jpg" alt="Interstellar thumbnail 4" /></button>
+          <button onclick="swapImage(this, 'ints5.jpg')" type="button" aria-pressed="false"><img src="ints5.jpg" alt="Interstellar thumbnail 5" /></button>
+          <button onclick="swapImage(this, 'ints6.jpg')" type="button" aria-pressed="false"><img src="ints6.jpg" alt="Interstellar thumbnail 6" /></button>
+          <button onclick="swapImage(this, 'ints7.jpg')" type="button" aria-pressed="false"><img src="ints7.jpg" alt="Interstellar thumbnail 7" /></button>
+          <button class="active" onclick="swapImage(this, 'ints8.jpg')" type="button" aria-pressed="true"><img src="ints8.jpg" alt="Interstellar thumbnail 8" /></button>
+          <button onclick="swapImage(this, 'ints9.jpg')" type="button" aria-pressed="false"><img src="ints9.jpg" alt="Interstellar thumbnail 9" /></button>
+          <button onclick="swapImage(this, 'instx.jpg')" type="button" aria-pressed="false"><img src="instx.jpg" alt="Interstellar thumbnail 10" /></button>
         </div>
       </article>
 
@@ -135,16 +135,16 @@
     <section class="gallery-section panel" id="gallery">
       <h2>Full Gallery</h2>
       <div class="gallery-grid">
-        <img src="ints1.jpg" alt="Interstellar gallery image 1" />
-        <img src="ints2.jpg" alt="Interstellar gallery image 2" />
-        <img src="ints3.jpg" alt="Interstellar gallery image 3" />
-        <img src="ints4.jpg" alt="Interstellar gallery image 4" />
-        <img src="ints5.jpg" alt="Interstellar gallery image 5" />
-        <img src="ints6.jpg" alt="Interstellar gallery image 6" />
-        <img src="ints7.jpg" alt="Interstellar gallery image 7" />
-        <img src="ints8.jpg" alt="Interstellar gallery image 8" />
-        <img src="ints9.jpg" alt="Interstellar gallery image 9" />
-        <img src="instx.jpg" alt="Interstellar gallery image 10" />
+        <img src="ints1.jpg" alt="Interstellar gallery image 1" loading="lazy" />
+        <img src="ints2.jpg" alt="Interstellar gallery image 2" loading="lazy" />
+        <img src="ints3.jpg" alt="Interstellar gallery image 3" loading="lazy" />
+        <img src="ints4.jpg" alt="Interstellar gallery image 4" loading="lazy" />
+        <img src="ints5.jpg" alt="Interstellar gallery image 5" loading="lazy" />
+        <img src="ints6.jpg" alt="Interstellar gallery image 6" loading="lazy" />
+        <img src="ints7.jpg" alt="Interstellar gallery image 7" loading="lazy" />
+        <img src="ints8.jpg" alt="Interstellar gallery image 8" loading="lazy" />
+        <img src="ints9.jpg" alt="Interstellar gallery image 9" loading="lazy" />
+        <img src="instx.jpg" alt="Interstellar gallery image 10" loading="lazy" />
       </div>
     </section>
 
@@ -166,7 +166,7 @@
         >
           Purchase Now
         </a>
-        <a class="btn-ghost" href="house.html">Enter the House</a>
+        <a class="btn-ghost" href="thefoundry.html">Enter the Foundry</a>
       </div>
     </section>
 
@@ -174,20 +174,12 @@
       <div class="footer-links">
         <a href="index.html">Home</a>
         <a href="registry/index.html">Registry</a>
-        <a href="house.html">The House</a>
+        <a href="thefoundry.html">The Foundry</a>
       </div>
       <div class="footer-note">Gyre &amp; Wabe • Coordinators of Chaos • EST 2026</div>
     </footer>
   </main>
 
-  <script>
-    function swapImage(button, src) {
-      document.getElementById("mainImage").src = src;
-
-      const buttons = document.querySelectorAll(".thumbnail-grid button");
-      buttons.forEach(btn => btn.classList.remove("active"));
-      button.classList.add("active");
-    }
-  </script>
+  <script src="script.js"></script>
 </body>
 </html>
