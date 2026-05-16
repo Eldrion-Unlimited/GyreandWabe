@@ -3,120 +3,326 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GWR-2026-0008 | A Pimp Named Hatter | Gyre &amp; Wabe Registry</title>
+  <meta name="description" content="A Pimp Named Hatter entered into the official Gyre &amp; Wabe Registry as an authentic artifact." />
+  <style>
+    :root {
+      --line: rgba(212, 175, 55, 0.28);
+      --gold: #d4af37;
+      --text: #f4efe2;
+      --muted: #b7ab84;
+      --shadow: 0 18px 48px rgba(0,0,0,0.45);
+    }
 
-  <title>GWR-2026-0008 | A Pimp Named Hatter | Gyre & Wabe Registry</title>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
 
-  <meta name="description" content="Official Gyre & Wabe registry record for GWR-2026-0008: A Pimp Named Hatter, a one-of-one artisan dice set authenticated by The House." />
+    body {
+      min-height: 100vh;
+      font-family: Georgia, "Times New Roman", serif;
+      color: var(--text);
+      background:
+        radial-gradient(circle at top, rgba(212,175,55,0.08), transparent 32%),
+        linear-gradient(180deg, #050505 0%, #0a0a0a 48%, #070707 100%);
+      letter-spacing: 0.02em;
+    }
 
-  <link rel="stylesheet" href="style.css" />
+    a { color: inherit; text-decoration: none; }
+
+    .utility-nav {
+      position: sticky;
+      top: 0;
+      z-index: 999;
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      background: rgba(7,7,7,0.82);
+      border-bottom: 1px solid rgba(212,175,55,0.18);
+    }
+
+    .utility-nav-inner {
+      width: min(1080px, calc(100% - 32px));
+      margin: 0 auto;
+      min-height: 72px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+    }
+
+    .brand-lockup {
+      color: var(--gold);
+      text-transform: uppercase;
+      letter-spacing: 0.24em;
+      font-size: 0.8rem;
+    }
+
+    .utility-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .utility-links a {
+      color: var(--text);
+      border: 1px solid rgba(212,175,55,0.18);
+      background: rgba(212,175,55,0.06);
+      padding: 10px 14px;
+      border-radius: 999px;
+      font-size: 0.76rem;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      transition: transform 0.18s ease, border-color 0.18s ease, background 0.18s ease;
+    }
+
+    .utility-links a:hover,
+    .utility-links a[aria-current="page"] {
+      transform: translateY(-1px);
+      border-color: rgba(212,175,55,0.42);
+      background: rgba(212,175,55,0.12);
+    }
+
+    .wrap {
+      width: min(1080px, calc(100% - 32px));
+      margin: 0 auto;
+      padding: 32px 0 80px;
+    }
+
+    .crest {
+      text-align: center;
+      color: var(--muted);
+      font-size: 0.82rem;
+      letter-spacing: 0.32em;
+      text-transform: uppercase;
+      margin-bottom: 18px;
+    }
+
+    .hero {
+      background: linear-gradient(180deg, rgba(212,175,55,0.08), rgba(255,255,255,0.01));
+      border: 1px solid var(--line);
+      border-radius: 22px;
+      padding: 42px 28px 30px;
+      box-shadow: var(--shadow);
+    }
+
+    .eyebrow {
+      color: var(--gold);
+      font-size: 0.78rem;
+      text-transform: uppercase;
+      letter-spacing: 0.35em;
+      margin-bottom: 14px;
+    }
+
+    h1 {
+      font-size: clamp(2rem, 5vw, 4rem);
+      line-height: 1;
+      margin-bottom: 10px;
+    }
+
+    .subtitle {
+      color: var(--muted);
+      font-size: 1rem;
+      max-width: 760px;
+      line-height: 1.75;
+    }
+
+    .pill-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 24px;
+    }
+
+    .pill {
+      border: 1px solid var(--line);
+      background: rgba(212,175,55,0.08);
+      color: var(--text);
+      padding: 10px 14px;
+      border-radius: 999px;
+      font-size: 0.82rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 20px;
+      margin-top: 22px;
+    }
+
+    .panel {
+      background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+      border: 1px solid var(--line);
+      border-radius: 22px;
+      padding: 24px;
+      box-shadow: var(--shadow);
+    }
+
+    h2 {
+      font-size: 0.9rem;
+      letter-spacing: 0.28em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 18px;
+    }
+
+    .registry-table {
+      display: grid;
+      grid-template-columns: minmax(170px, 220px) 1fr;
+      gap: 12px 18px;
+    }
+
+    .label {
+      color: var(--muted);
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      font-size: 0.74rem;
+      padding-top: 2px;
+    }
+
+    .value {
+      font-size: 1rem;
+      line-height: 1.6;
+      border-bottom: 1px solid rgba(212,175,55,0.12);
+      padding-bottom: 10px;
+    }
+
+    .statement {
+      font-size: 1.1rem;
+      line-height: 1.9;
+      color: var(--text);
+    }
+
+    .quote {
+      margin-top: 16px;
+      padding-left: 18px;
+      border-left: 2px solid var(--gold);
+      color: var(--muted);
+      line-height: 1.9;
+    }
+
+    .return-strip {
+      margin-top: 28px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      justify-content: center;
+    }
+
+    .return-strip a {
+      color: var(--text);
+      border: 1px solid rgba(212,175,55,0.2);
+      background: rgba(212,175,55,0.05);
+      padding: 12px 16px;
+      border-radius: 999px;
+      font-size: 0.78rem;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      transition: transform 0.18s ease, border-color 0.18s ease, background 0.18s ease;
+    }
+
+    .return-strip a:hover {
+      transform: translateY(-1px);
+      border-color: rgba(212,175,55,0.42);
+      background: rgba(212,175,55,0.12);
+    }
+
+    .footer {
+      margin-top: 22px;
+      text-align: center;
+      color: var(--muted);
+      font-size: 0.8rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+    }
+
+    @media (max-width: 860px) {
+      .grid { grid-template-columns: 1fr; }
+      .registry-table { grid-template-columns: 1fr; }
+    }
+
+    @media (max-width: 680px) {
+      .utility-nav-inner, .wrap { width: calc(100% - 20px); }
+      .utility-nav-inner {
+        min-height: auto;
+        padding: 12px 0;
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      .utility-links { width: 100%; }
+      .utility-links a { flex: 1 1 auto; text-align: center; }
+    }
+  </style>
 </head>
-
 <body>
-  <header class="site-header">
-    <a href="index.html" class="brand-link">GYRE & WABE</a>
+  <nav class="utility-nav">
+    <div class="utility-nav-inner">
+      <a class="brand-lockup" href="../index.html">Gyre &amp; Wabe</a>
+      <div class="utility-links">
+        <a href="index.html">Registry</a>
+        <a href="../index.html">Home</a>
+      </div>
+    </div>
+  </nav>
 
-    <nav class="site-nav">
-      <a href="index.html">Home</a>
-      <a href="thefoundry.html">The Foundry</a>
-      <a href="authentication.html">Authentication</a>
-      <a href="acquisition.html">Acquisition</a>
-    </nav>
-  </header>
+  <main class="wrap">
+    <div class="crest">Gyre &amp; Wabe Registry</div>
 
-  <main class="registry-page">
-    <section class="registry-hero">
-      <p class="eyebrow">Official Registry Record</p>
+    <section class="hero">
+      <div class="eyebrow">Official Archive Entry</div>
+      <h1>A Pimp Named Hatter</h1>
 
-      <h1>GWR-2026-0008</h1>
-      <h2>A Pimp Named Hatter</h2>
-
-      <p class="registry-subtitle">
-        One-of-one artisan dice set authenticated by Gyre & Wabe.
+      <p class="subtitle">
+        Registry designation <strong>GWR-2026-0008</strong>. This artifact has been entered into the official
+        Gyre &amp; Wabe Registry and verified as an authentic original.
       </p>
 
-      <div class="registry-badges">
-        <span>ONE OF ONE</span>
-        <span>HOUSE VERIFIED</span>
-        <span>NFC AUTHENTICATED</span>
+      <div class="pill-row">
+        <div class="pill">GWR-2026-0008</div>
+        <div class="pill">GW-HATT-APNH-KF-01-B01</div>
+        <div class="pill">ONE OF ONE</div>
+        <div class="pill">FORGED</div>
       </div>
     </section>
 
-    <section class="registry-card">
-      <h3>Registry Details</h3>
+    <section class="grid">
+      <article class="panel">
+        <h2>Registry Record</h2>
 
-      <div class="registry-grid">
-        <div>
-          <strong>Registry ID</strong>
-          <p>GWR-2026-0008</p>
+        <div class="registry-table">
+          <div class="label">Registry ID</div><div class="value">GWR-2026-0008</div>
+          <div class="label">SKU</div><div class="value">GW-HATT-APNH-KF-01-B01</div>
+          <div class="label">Product Name</div><div class="value">A Pimp Named Hatter</div>
+          <div class="label">Edition</div><div class="value">ONE OF ONE</div>
+          <div class="label">Creation Date</div><div class="value">May 16, 2026</div>
+          <div class="label">Status</div><div class="value">FORGED</div>
+          <div class="label">Registry URL</div><div class="value">.../GWR-2026-0008.html</div>
+          <div class="label">Owner / Recipient</div><div class="value">—</div>
+          <div class="label">Certificate Line</div><div class="value">An original Gyre &amp; Wabe artifact, entered into the registry as authentic.</div>
+          <div class="label">Materials / Effects</div><div class="value">Royal chaos, velvet smoke, and Hatter-class swagger.</div>
+          <div class="label">Notes</div><div class="value">A HATT realm original forged in theatrical excess and coordinated madness.</div>
         </div>
+      </article>
 
-        <div>
-          <strong>Set Name</strong>
-          <p>A Pimp Named Hatter</p>
-        </div>
+      <aside class="panel">
+        <h2>Authenticity</h2>
 
-        <div>
-          <strong>SKU</strong>
-          <p>GW-HATT-APNH-01-B01</p>
-        </div>
+        <p class="statement">
+          Authenticated by <strong>Gyre &amp; Wabe</strong> and entered into the living archive as a documented artifact of the house.
+        </p>
 
-        <div>
-          <strong>Realm</strong>
-          <p>Hatter</p>
+        <div class="quote">
+          Loud enough to interrupt the tea party and smooth enough to walk away owning it, A Pimp Named Hatter exists as a singular artifact of coordinated chaos.
         </div>
-
-        <div>
-          <strong>Edition</strong>
-          <p>One of One</p>
-        </div>
-
-        <div>
-          <strong>Chaos Coordinator</strong>
-          <p>The House</p>
-        </div>
-      </div>
+      </aside>
     </section>
 
-    <section class="registry-card">
-      <h3>House Lore</h3>
-
-      <p>
-        A Pimp Named Hatter walks out of the tea party like he owns the table,
-        the clock, and every bad decision poured into the cup. Loud, strange,
-        sharp-dressed, and impossible to ignore — this set carries full Hatter
-        energy with a grin that knows exactly what it is doing.
-      </p>
-
-      <p>
-        Authenticated by The House as a singular Gyre & Wabe creation. No twins.
-        No reruns. No second pour.
-      </p>
+    <section class="return-strip">
+      <a href="index.html">Return to Registry</a>
+      <a href="../index.html">Home</a>
     </section>
 
-    <section class="registry-card">
-      <h3>Authentication Notice</h3>
-
-      <p>
-        This page is the public registry record connected to the physical NFC tag
-        embedded with this set. If this page was reached by scanning the included
-        NFC card or sealed package tag, the registry path is active and valid.
-      </p>
-
-      <p>
-        Ownership status may be updated by The House after acquisition.
-      </p>
-    </section>
-
-    <section class="registry-actions">
-      <a class="button-primary" href="authentication.html">Verify Authentication</a>
-      <a class="button-secondary" href="index.html">Return Home</a>
-    </section>
+    <div class="footer">One of One • EST 2026 • Coordinators of Chaos</div>
   </main>
-
-  <footer class="site-footer">
-    <p>© 2026 Gyre & Wabe — Coordinators of Chaos.</p>
-  </footer>
-
-  <script src="script.js"></script>
 </body>
 </html>
